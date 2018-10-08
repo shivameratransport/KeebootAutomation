@@ -1,4 +1,4 @@
-package loginPage;
+package com.web.login;
 
 import com.keeboot.web.WebBaseTest;
 import org.testng.annotations.DataProvider;
