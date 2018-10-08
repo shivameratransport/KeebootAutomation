@@ -46,8 +46,6 @@ public class CustomizedEmailableReport implements IReporter {
      * Overriden method from IReporter class
      * generates the custom report
      *
-     * @author Jessica Marshall
-     * @date 9/21/2017
      */
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
@@ -77,8 +75,6 @@ public class CustomizedEmailableReport implements IReporter {
      * test name, test results, failure reasons, etc and add to a list of rows to
      * add to each table (Test execution summary & test execution details)
      *
-     * @author Jessica Marshall
-     * @date 9/25/2017
      * @param suites
      */
     private void getTestSuiteDetails(List<ISuite> suites) {
@@ -160,8 +156,6 @@ public class CustomizedEmailableReport implements IReporter {
      *
      * @param tests
      * @param suiteName
-     * @date 9/25/2017
-     * @author Jessica Marshall
      */
     private void generateDetailRow(Set<ITestResult> tests, String suiteName) {
         float totalTimeInSecs = 0;
@@ -213,8 +207,6 @@ public class CustomizedEmailableReport implements IReporter {
      * Grab the templated HTML report from the project and convert to a string so that the dynamic
      * test results can be added
      *
-     * @author Jessica Marshall
-     * @date 9/25/2017
      * @return
      */
     private String initReportTemplate() {
@@ -233,8 +225,6 @@ public class CustomizedEmailableReport implements IReporter {
      * Updates the report template with updated version of report template with dynamic testng results.
      * The name of the finished html report is 'automation-email-report.html'
      *
-     * @author Jessica Marshall
-     * @date 9/25/2017
      * @param outputDirectory
      * @param reportTemplate
      */

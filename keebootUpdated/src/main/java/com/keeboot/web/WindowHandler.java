@@ -15,8 +15,6 @@ public class WindowHandler {
      * Use FluentWait to halt the script until the window with the desired text in the title is active
      * to return true. If the window is not found in the default timeout, return false.
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            title
      * @return true/false
@@ -29,8 +27,6 @@ public class WindowHandler {
      * Use FluentWait to halt the script until the window with the desired text in the title is active
      * to return true. If the window is not found in the default timeout, return false.
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            title
      * @return true/false
@@ -63,8 +59,6 @@ public class WindowHandler {
      * Use FluentWait to halt the script until the window with the desired text is contained in the title and
      * active to return true. If the window is not found in the default timeout, return false.
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            title
      * @return true/false
@@ -77,8 +71,6 @@ public class WindowHandler {
      * Use FluentWait to halt the script until the window with the desired text is contained in the title and
      * active to return true. If the window is not found in the default timeout, return false.
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            title, timeout
      * @return true/false
@@ -111,8 +103,6 @@ public class WindowHandler {
      * Use FluentWait to halt the script until the window with the desired regex pattern is matched in the
      * title and the window is active to return true. If the window is not found in the default timeout, return false.
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            title
      * @return true/false
@@ -125,8 +115,6 @@ public class WindowHandler {
      * Use FluentWait to halt the script until the window with the desired regex pattern is matched in the
      * title and the window is active to return true. If the window is not found in the default timeout, return false.
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            title, timeout
      * @return true/false
@@ -158,8 +146,6 @@ public class WindowHandler {
     /**
      * Use FluentWait to halt the script until the specified number of windows are found
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            expectedNumberOfWindows
      * @return true/false
@@ -171,8 +157,6 @@ public class WindowHandler {
     /**
      * Use FluentWait to halt the script until the specified number of windows are found
      *
-     * @version Created 01/15/2016
-     * @author Justin Phlegar
      * @param driver,
      *            expectedNumberOfWindows
      * @return true/false

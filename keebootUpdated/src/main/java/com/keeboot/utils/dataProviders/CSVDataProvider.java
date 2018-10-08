@@ -22,8 +22,6 @@ public class CSVDataProvider {
      *
      * @param filePath
      *            the file path of the CSV file
-     * @version 12/18/2014
-     * @author Jessica Marshall
      * @return 2d array of test data
      */
     public static Object[][] getData(String filePath) {
@@ -108,8 +106,6 @@ public class CSVDataProvider {
      *
      * @param userID
      *            the MLife userID of the MLife user
-     * @version 10/26/2017
-     * @author John Martin
      * @return array of test data
      */
     public static String[] getMLifeUser(String userID) {
@@ -180,8 +176,6 @@ public class CSVDataProvider {
     /**
      * This gets Random MLife Email ID and Mlife Number from a csv file. It returns the data as an array.
      *
-     * @version 03/26/2018
-     * @author Chidanand RG
      * @return Array containing Email and Mlife Number
      */
     public static String[] getRandomMLifeUser() {

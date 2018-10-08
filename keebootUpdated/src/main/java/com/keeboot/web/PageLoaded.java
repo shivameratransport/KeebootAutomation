@@ -15,8 +15,6 @@ import com.keeboot.web.webelements.Element;
  * Several different methods of waiting for a page to finish loading.
  *
  *
- * @version 10/16/2014
- * @author Justin Phlegar
  *
  */
 public class PageLoaded {
@@ -31,8 +29,6 @@ public class PageLoaded {
      *            The webDriver
      * @param obj
      *            The element you are waiting to display on the page
-     * @version 10/16/2014
-     * @author Justin Phlegar
      * @return False if the element is not found after the timeout, true if is
      *         found
      */
@@ -53,8 +49,6 @@ public class PageLoaded {
      *            The webDriver
      * @param obj
      *            The element you are waiting to display on the page
-     * @version 12/16/2014
-     * @author Jessica Marshall
      * @return False if the element is not found after the timeout, true if is
      *         found
      */
@@ -96,8 +90,6 @@ public class PageLoaded {
      * finished loading. It will wait for the ready state to be either
      * 'interactive' or 'complete'.
      *
-     * @version 12/16/2014
-     * @author Jessica Marshall
      * @return False if the element is not found after the timeout, true if is
      *         found
      */
@@ -115,8 +107,6 @@ public class PageLoaded {
      * @param timeout
      *            Integer value of number seconds to wait for a page to finish
      *            loaded before quiting
-     * @version 12/16/2014
-     * @author Jessica Marshall
      * @return False if the element is not found after the timeout, true if is
      *         found
      */
@@ -149,8 +139,6 @@ public class PageLoaded {
      * This uses protractor method to wait until a page is ready -
      * notifyWhenNoOutstandingRequests
      *
-     * @version 10/16/2014
-     * @author Justin Phlegar
      *
      */
     public static void isAngularComplete(KeebootDriver oDriver) {
@@ -172,8 +160,6 @@ public class PageLoaded {
      *
      * @param oDriver
      *            The webDriver
-     * @version 12/16/2014
-     * @author Jessica Marshall
      * @return False if the element is not found after the timeout, true if is
      *         found
      */
@@ -192,8 +178,6 @@ public class PageLoaded {
      * @param timeout
      *            Integer value of number seconds to wait for a page to finish
      *            loaded before quiting
-     * @version 12/16/2014
-     * @author Jessica Marshall
      * @return False if the element is not found after the timeout, true if is
      *         found
      */

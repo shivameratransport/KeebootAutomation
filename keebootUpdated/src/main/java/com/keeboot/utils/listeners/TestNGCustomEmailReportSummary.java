@@ -301,7 +301,6 @@ public class TestNGCustomEmailReportSummary implements IReporter {
 
     private void resultDetail(IResultMap tests) {
 
-        // Mahesh added
         Set<ITestResult> testResults = tests.getAllResults();
         // System.out.println("resultDetail before sort .."+ testResults);
         List<ITestResult> list = new ArrayList<ITestResult>(testResults);
@@ -601,7 +600,6 @@ public class TestNGCustomEmailReportSummary implements IReporter {
                 + (row % 2 == 0 ? " class=\"stripe\"" : "")
                 + "><td "
                 + testIndex + "\"><b>" + label + "</b></a>" + "</td>");
-        // [Govind]: Commented below as don't need hyperlink on Test Group Name Label. If needed then uncomment below and comment above.
 
         /*
          * out.print("<tr"

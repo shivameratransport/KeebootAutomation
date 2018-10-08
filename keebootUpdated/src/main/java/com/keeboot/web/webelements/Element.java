@@ -26,7 +26,6 @@ import com.keeboot.web.webelements.impl.internal.ImplementedBy;
 public interface Element extends WebElement, WrapsElement, Locatable {
 
     /**
-     * @author Justin
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#clear()
      * @summary - used to clear text entry areas; has not effect on any other
      *          elements
@@ -37,13 +36,11 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     WebDriver getWrappedDriver();
 
     /**
-     * @author Justin
      * @summary - draws the focus to an object using Actions
      */
     void focus();
 
     /**
-     * @author Justin
      * @see org.openqa.selenium.WebElement#click()
      * @summary - default Selenium click
      */
@@ -58,7 +55,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     void jsClick();
 
     /**
-     * @author Justin
      * @see org.openqa.selenium.WebElement#click()
      * @summary - draws the focus to an object and clicks the object using
      *          Actions
@@ -68,7 +64,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     void focusClick();
 
     /**
-     * @author Justin
      * @param keysToSend
      *            - an array of characters or string literals
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#sendKeys(java.lang.CharSequence...)
@@ -77,7 +72,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      */
 
     /**
-     * @author Justin
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#onBlur()
      * @summary - triggers the onBlure FireEvent in the DOM
      */
@@ -88,7 +82,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     void sendKeys(CharSequence... keysToSend);
 
     /**
-     * @author Justin
      * @see org.openqa.selenium.WebElement#submit
      * @summary - submits form to remote server; exception thrown if the element
      *          is not within a form
@@ -97,7 +90,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     void submit();
 
     /**
-     * @author Justin
      * @param by
      *            - Search for specified {@link By} location and return it's
      *            {@link WebElement}
@@ -109,7 +101,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     Element findElement(By by);
 
     /**
-     * @author Justin
      * @param by
      *            - Search for specified {@link By} location and return all
      *            elements found in a {@link List}
@@ -121,7 +112,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     List<WebElement> findElements(By by);
 
     /**
-     * @author Justin
      * @param name
      *            - Search for specified attribute and return it's value
      * @return {@link String} Value of specified attribute
@@ -134,7 +124,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     ArrayList getAllAttributes();
 
     /**
-     * @author Justin
      * @param propertyName
      *            - Search for specified property and return it's value
      * @return {@link String} Value of specified property
@@ -151,7 +140,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     Coordinates getCoordinates();
 
     /**
-     * @author Justin
      * @return {@link Point} Return x and y location
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#getLocation()
      */
@@ -159,7 +147,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     Point getLocation();
 
     /**
-     * @author Justin
      * @return {@link Dimension} Return height and width of element
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#getSize()
      */
@@ -167,7 +154,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     Dimension getSize();
 
     /**
-     * @author Justin
      * @return {@link String} Text value in element
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#getText()
      */
@@ -175,7 +161,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     String getText();
 
     /**
-     * @author Justin
      * @return {@link String} Tag value in element
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#getTagName()
      */
@@ -183,7 +168,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     String getTagName();
 
     /**
-     * @author Justin
      * @return {@link Boolean} Return TRUE if element is enabled, FALSE if it is
      *         not
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#isEnabled()
@@ -195,7 +179,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
     boolean isSelected();
 
     /**
-     * @author Justin
      * @return {@link Boolean} Return TRUE if element is Displayed, FALSE if it
      *         is not
      * @see main.java.com.orasi.core.interfaces.impl.ElementImpl#isDisplayed()
@@ -205,28 +188,24 @@ public interface Element extends WebElement, WrapsElement, Locatable {
 
     /**
      * @summary - Returns true when the inner element is ready to be used.
-     * @author Justin
      * @return boolean true for an initialized WebElement, or false if we were
      *         somehow passed a null WebElement.
      */
     boolean elementWired();
 
     /**
-     * @author Justin
      * @return locator - type of element that was used to create element using
      *         {@link FindBy}
      */
     // By getElementLocator();
 
     /**
-     * @author Justin
      * @return {@link By} locator value of element that was used to create
      *         element using {@link FindBy}
      */
     // String getElementIdentifier();
 
     /**
-     * @author Justin
      * @return locator identifier and the value of element that was used to
      *         create element using {@link FindBy}
      */
@@ -258,7 +237,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If object is not visible within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param args
      *            Optional arguments </br>
      *            &nbsp;&nbsp;&nbsp;&nbsp;<b>timeout</b> - the maximum time in seconds the method should try to sync. Called
@@ -277,7 +255,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If object is not hidden within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param args
      *            Optional arguments </br>
      *            &nbsp;&nbsp;&nbsp;&nbsp;<b>timeout</b> - the maximum time in seconds the method should try to sync. Called
@@ -296,7 +273,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If object is not enabled within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param args
      *            Optional arguments </br>
      *            &nbsp;&nbsp;&nbsp;&nbsp;<b>timeout</b> - the maximum time in seconds the method should try to sync. Called
@@ -315,7 +291,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If object is not disabled within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param args
      *            Optional arguments </br>
      *            &nbsp;&nbsp;&nbsp;&nbsp;<b>timeout</b> - the maximum time in seconds the method should try to sync. Called
@@ -334,7 +309,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If text is not present within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param text
      *            - Text to search for
      * @param args
@@ -355,7 +329,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If text is not present within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param regex
      *            (Required) The regular expression that should match to text the element should contain in either its text or 'value' attribute
      * @param args
@@ -376,7 +349,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If value is not present within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param attribute
      *            (Required) - Element attribute to view
      * @param value
@@ -399,7 +371,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If value is not present within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param attribute
      *            (Required) - Element attribute to view
      * @param regex
@@ -422,7 +393,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If value is not present within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param cssProperty
      *            (Required) - Element CSS Property to match
      * @param regex
@@ -445,7 +415,6 @@ public interface Element extends WebElement, WrapsElement, Locatable {
      * If value is not present within the time, handle the error based default handler
      * or by boolean passed in
      *
-     * @author Justin
      * @param cssProperty
      *            (Required) - Element CSS Property to match
      * @param regex

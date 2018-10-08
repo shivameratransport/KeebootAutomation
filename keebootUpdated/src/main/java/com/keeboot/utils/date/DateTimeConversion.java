@@ -83,7 +83,6 @@ public class DateTimeConversion {
     /**
      * Get the number of days between start & end dates
      *
-     * @author Chidanand RG / Sangram
      * @param format
      *            ex: 'MM/dd/yyyy', 'yyyy-MM-dd'
      * @param startDate
@@ -101,7 +100,6 @@ public class DateTimeConversion {
             diffDays = String.valueOf((int) (diffTime / (1000 * 60 * 60 * 24)));
         } catch (Exception e) {
             e.printStackTrace();
-            // TODO Chidanand - please unit test this change
             // TestReporter.assertFail("Date format mismatch");
         }
         return diffDays;

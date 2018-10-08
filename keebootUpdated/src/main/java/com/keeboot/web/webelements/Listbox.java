@@ -50,28 +50,24 @@ public interface Listbox extends Element {
     void deselectByVisibleText(String text);
 
     /**
-     * @author Justin
      * @return WebElement
      * @see org.openqa.selenium.support.ui.Select#getFirstSelectedOption()
      */
     WebElement getFirstSelectedOption();
 
     /**
-     * @author Justin
      * @return WebElement list of all options in a given listbox
      * @see org.openqa.selenium.WebElement#isSelected()
      */
     List<WebElement> getOptions();
 
     /**
-     * @author Justin
      * @return WebElement list of all selected options in a given listbox
      * @see org.openqa.selenium.WebElement#isSelected()
      */
     List<WebElement> getAllSelectedOptions();
 
     /**
-     * @author Justin
      * @return {@link boolean} TRUE if element is currently select
      * @see org.openqa.selenium.WebElement#isSelected()
      */

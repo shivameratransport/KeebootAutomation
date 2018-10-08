@@ -301,7 +301,6 @@ public class TestNGCustomEmailReport01 implements IReporter {
 
     private void resultDetail(IResultMap tests) {
 
-        // Mahesh added
         Set<ITestResult> testResults = tests.getAllResults();
         // System.out.println("resultDetail before sort .."+ testResults);
         List<ITestResult> list = new ArrayList<ITestResult>(testResults);
@@ -476,7 +475,6 @@ public class TestNGCustomEmailReport01 implements IReporter {
         tableColumnStart("End<br/>Time");
         tableColumnStart("Total<br/>Time(hh:mm:ss)");
 
-        // Govind - Comment below code as don't need Groups
         // tableColumnStart("Included<br/>Groups");
         // tableColumnStart("Excluded<br/>Groups");
 
@@ -532,7 +530,6 @@ public class TestNGCustomEmailReport01 implements IReporter {
                 summaryCell(millisToTimeConversion((overview.getEndDate().getTime() - overview
                         .getStartDate().getTime()) / 1000), true);
 
-                // Govind - Comment below code as don't need Groups
                 // summaryCell(overview.getIncludedGroups());
                 // summaryCell(overview.getExcludedGroups());
                 out.println("</tr>");

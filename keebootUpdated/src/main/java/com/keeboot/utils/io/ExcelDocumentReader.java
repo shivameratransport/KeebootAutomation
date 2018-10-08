@@ -39,8 +39,6 @@ public class ExcelDocumentReader {
      *
      * @param sheetName
      *            the excel sheet
-     * @version 10/16/2014
-     * @author Justin Phlegar
      * @return 2d array of test data
      */
 

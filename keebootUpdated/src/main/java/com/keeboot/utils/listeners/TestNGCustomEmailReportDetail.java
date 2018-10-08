@@ -304,7 +304,6 @@ public class TestNGCustomEmailReportDetail implements IReporter {
 
     private void resultDetail(IResultMap tests) {
 
-        // Mahesh added
         Set<ITestResult> testResults = tests.getAllResults();
         // System.out.println("resultDetail before sort .."+ testResults);
         List<ITestResult> list = new ArrayList<ITestResult>(testResults);

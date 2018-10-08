@@ -16,7 +16,6 @@ public class SendReport {
 
     }
 
-    // [Govind]: To be moved to AfterSuite - Kept here for testing purpose only
     public static void main(String[] ar) throws Exception {
         SendReport sm = new SendReport();
         sm.sendMail();

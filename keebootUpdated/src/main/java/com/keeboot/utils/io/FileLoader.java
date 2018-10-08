@@ -83,9 +83,6 @@ public class FileLoader {
     /**
      * Read a file and return the string
      *
-     * @author Pratik
-     *
-     * @date 07/08/2018
      */
 
     public static String readFile(File file) throws IOException {

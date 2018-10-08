@@ -32,7 +32,6 @@ import com.saucelabs.saucerest.SauceREST;
 
 /**
  *
- * @author Justin Phlegar & Waightstill W Avery
  * @summary This class is designed to be extended by page classes and
  *          implemented by test classes. It houses test environment data and
  *          associated getters and setters, setup for both local and remote
@@ -40,7 +39,6 @@ import com.saucelabs.saucerest.SauceREST;
  *          The need for this arose due to the parallel behavior that indicated
  *          that WebDriver instances were crossing threads and testing on the
  *          wrong os/browser configurations
- * @date April 5, 2015
  *
  */
 public class WebBaseTest extends BaseTest {
@@ -274,9 +272,6 @@ public class WebBaseTest extends BaseTest {
     /**
      * Launches the application under test using a URL passed into method
      *
-     * @version 12/16/2014
-     * @author Justin Phlegar
-     * @return Nothing
      */
     private void launchApplication(String URL) {
         getDriver().get(URL);
@@ -287,8 +282,6 @@ public class WebBaseTest extends BaseTest {
      * It will look for a key in the properties file with the
      * prefix of the application under test + "_" + the environment being tested.
      *
-     * @version 12/16/2014
-     * @author Justin Phlegar
      * @return Nothing
      */
     private void launchApplication() {
@@ -304,8 +297,6 @@ public class WebBaseTest extends BaseTest {
      * page in the application under test, you will not set that field & will instead just use the base
      * URL from the properties file
      *
-     * @version 12/16/2014
-     * @author Jessica Marshall
      */
     public KeebootDriver testStart(String testName) {
         // Uncomment the following line to have TestReporter outputs output to
@@ -395,8 +386,6 @@ public class WebBaseTest extends BaseTest {
      * Sets up the driver type, location, browser under test, os
      *
      * @param None
-     * @version 12/16/2014
-     * @author Justin Phlegar
      * @return Nothing
      * @throws IOException
      * @throws InterruptedException
@@ -435,8 +424,6 @@ public class WebBaseTest extends BaseTest {
      * It uses driver servers for each browser that are stored within the project.
      * For firefox versions greater than 46, you will need to use the marionette/gecko driver.
      *
-     * @author jessica.marshall
-     * @date 9/13/2016
      */
     private void localDriverSetup() {
 
@@ -510,8 +497,6 @@ public class WebBaseTest extends BaseTest {
      * Creates the remote webdriver instance based on browser, browser version
      * OS, and the remote grid URL
      *
-     * @author jessica.marshall
-     * @date 9/13/2016
      */
     private void remoteDriverSetup() {
         // Capabilities for the remote web driver
@@ -573,8 +558,6 @@ public class WebBaseTest extends BaseTest {
      * mobileAppPath -- The absolute local path or remote http URL to an .ipa or .apk file, or a .zip containing one of these.
      * Leave browserUnderTest blank/null if using this
      *
-     * @date 9/28/2016
-     * @author jessica.marshall
      */
 //    private void mobileDriverSetup() {
 //        DesiredCapabilities caps = new DesiredCapabilities();
@@ -662,8 +645,6 @@ public class WebBaseTest extends BaseTest {
     /**
      * Get EVA Key based on Environment parameter set in XML
      *
-     * @author Chidanand RG
-     * @date 08/13/2018
      */
 
     public String getEvaEnvironmentKey() {
