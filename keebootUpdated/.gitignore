@@ -1,0 +1,14 @@
+/target/
+/test-output/
+/selenium-reports/
+/bin/
+/lib/
+/src/test/resources/localRegression.xml
+/.idea/
+/.metadata/
+/RemoteSystemsTempFiles/
+/.settings/
+/etc/ideProfiles/
+/img/
+src/test/java/com/mgm/web/mystique/partnerTransactionAudit/CreateCustomRateSpreadInMystiqueAndVerifyRatePushInPartnerTranscationAuditTable.java
+src/test/java/com/mgm/web/mystique/partnerTransactionAudit/CreateCustomRateSpreadInMystiqueAndVerifyRatePushInPartnerTranscationAuditTable.java
