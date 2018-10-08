@@ -58,8 +58,6 @@ public class BaseRestTest extends WebBaseTest {
     /**
      * Added to return all the Cookies for My Vegas or any other URL
      *
-     * @author: Govind
-     * @date: 5th July 2018
      * @param Url
      * @return list of Cookies (HttpCookie)
      *

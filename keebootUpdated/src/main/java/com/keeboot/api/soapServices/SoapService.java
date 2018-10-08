@@ -73,8 +73,6 @@ public abstract class SoapService {
      *
      * @precondition Requires XML Document to be loaded by using
      *               {@link #setRequestDocument}
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Will return the current Request XML as a string
      */
     public String getRequest() {
@@ -90,8 +88,6 @@ public abstract class SoapService {
      *
      * @precondition Requires XML Document to be loaded by using
      *               {@link #setResponseDocument}
-     * @author Justin Phlegar
-     * @version Created 08/28/2014
      * @return Will return the current Response XML as a string
      */
     public String getResponse() {
@@ -108,8 +104,6 @@ public abstract class SoapService {
      *
      * @precondition The Response Status Code needs to be set by
      *               {@link #setRepsonseStatusCode(String)}
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Returns the Status Code of a response as a String
      */
     public String getResponseStatusCode() {
@@ -121,8 +115,6 @@ public abstract class SoapService {
      *
      * @precondition The Service URL needs to be set by
      *               {@link #setServiceURL(String)}
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Returns the Service URL as a String
      */
     public String getServiceURL() {
@@ -131,9 +123,6 @@ public abstract class SoapService {
 
     /**
      * Return the Service Name of the service under test
-     *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Returns the Service Name as a String
      */
     public String getServiceName() {
@@ -143,8 +132,6 @@ public abstract class SoapService {
     /**
      * Return the Service Operation Name of the service under test
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Returns the Service Operation Name as a String
      */
     public String getOperationName() {
@@ -157,8 +144,6 @@ public abstract class SoapService {
      *
      * @precondition The XML Document needs to be set by
      *               {@link #setRequestDocument(Document)}
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Returns the stored Request XML as a Document
      */
     protected Document getRequestDocument() {
@@ -171,8 +156,6 @@ public abstract class SoapService {
      *
      * @precondition The Response Document needs to be set by
      *               {@link #setResponseDocument(Document)}
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @return Returns the stored Response XML as a Document object
      */
     protected Document getResponseDocument() {
@@ -183,8 +166,6 @@ public abstract class SoapService {
      * Used to store the XML file as a Document object in memory. Can
      * be retrieved using {@link #getRequestDocument()}
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document XML file of the Request to be stored in memory
      */
@@ -199,8 +180,6 @@ public abstract class SoapService {
      * {@link #getResponse()}
      *
      * @precondition Requires valid XML Document to be sent
-     * @author Justin Phlegar
-     * @version Created 08/28/2014
      * @param doc
      *            Document: XML file of the Response to be stored in memory
      */
@@ -212,8 +191,6 @@ public abstract class SoapService {
      * Used to store URL of the Service Under Test in memory. Can be
      * retrieved using {@link #getServiceURL())}
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param url
      *            String: URL Endpoint of the Service Under Test
      */
@@ -225,8 +202,6 @@ public abstract class SoapService {
      * Used to store Service Name Under Test in memory. Can be
      * retrieved using {@link #getServiceName())}
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param url
      *            String: Service Name of the Service Under Test
      */
@@ -238,8 +213,6 @@ public abstract class SoapService {
      * Used to store the Service Operation Name Under Test in memory. Can be
      * retrieved using {@link #getOperationName())}
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param url
      *            String: Operation Name of the Service Under Test
      */
@@ -251,8 +224,6 @@ public abstract class SoapService {
      * Used to define Soap Version to use. Default is 1.2
      * Can by changed using SOAPConstants.SOAP_1_1_PROTOCOL or SOAPConstants.SOAP_1_2_PROTOCOL
      *
-     * @author Justin Phlegar
-     * @version Created: 09/12/2016
      * @param version
      *            SOAPConstants.SOAP_1_1_PROTOCOL or SOAPConstants.SOAP_1_2_PROTOCOL
      */
@@ -287,8 +258,6 @@ public abstract class SoapService {
      * /**
      * Determine how many nodes exist using queried XPath in the Request
      *
-     * @author Justin Phlegar
-     * @version Created: 09/12/2016
      * @param xpath
      *            Valid XPath to look for
      * @return Number of node found on XPath. If XPath is not found, return 0
@@ -307,8 +276,6 @@ public abstract class SoapService {
     /**
      * Determine how many nodes exist using queried XPath in the Response
      *
-     * @author Justin Phlegar
-     * @version Created: 09/12/2016
      * @param xpath
      *            Valid XPath to look for
      * @return Number of node found on XPath. If XPath is not found, return 0
@@ -327,8 +294,6 @@ public abstract class SoapService {
     /**
      * Takes an xpath and return the value if found in the request
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xpath
      *            String: xpath to evaluate
      */
@@ -342,8 +307,6 @@ public abstract class SoapService {
     /**
      * Takes an xpath and return the value if found in the response
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xpath
      *            String: xpath to evaluate
      */
@@ -358,8 +321,6 @@ public abstract class SoapService {
      * Find and open the excel or csv file sent. If successful, look and find
      * the matching scenario name then return its xpath and value data.
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param file
      *            String: File location either in the project or the hard disk
      *            path
@@ -425,8 +386,6 @@ public abstract class SoapService {
      * Takes the pre-built Request XML in memory and sends to the
      * service
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      */
     public void sendRequest() {
         logTrace("Entering SoapService#sendRequest");
@@ -511,8 +470,6 @@ public abstract class SoapService {
      * functions by adding "fx:" as a prefix. Please see
      * {@link #handleValueFunction} for more information
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xpath
      *            String: xpath to evaluate
      * @param value
@@ -580,8 +537,6 @@ public abstract class SoapService {
      * functions by adding "fx:" as a prefix. Please see
      * {@link #handleValueFunction} for more information
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xpath
      *            String: xpath to evaluate
      * @param value
@@ -609,8 +564,6 @@ public abstract class SoapService {
      * functions by adding "fx:" as a prefix. Please see
      * {@link #handleValueFunction} for more information
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xpath
      *            String: xpath to evaluate
      * @param value
@@ -639,8 +592,6 @@ public abstract class SoapService {
     /**
      * Validate XML Response and reports findings
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document to evaluate
      * @param xpath
@@ -680,8 +631,6 @@ public abstract class SoapService {
     /**
      * Main validation function that validates and reports findings
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document to evalute
      * @param xpath
@@ -757,8 +706,6 @@ public abstract class SoapService {
     /**
      * Validate XML Response and reports findings
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param resourcePath:
      *            path of file to read
      * @param scenario
@@ -780,8 +727,6 @@ public abstract class SoapService {
     /**
      * Call functions during setting of the xpath
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xpath
      *            String: Xpath to run the function on
      * @param function
