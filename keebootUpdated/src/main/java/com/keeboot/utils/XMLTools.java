@@ -45,8 +45,6 @@ public class XMLTools {
     /**
      * Adds an Attribute to the node on the location of the xpath
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document that will be updated
      * @param nodeName
@@ -88,8 +86,6 @@ public class XMLTools {
     /**
      * Removes an Attribute to the node on the location of the xpath
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document that will be updated
      * @param nodeName
@@ -131,8 +127,6 @@ public class XMLTools {
     /**
      * Adds an Namespace to the node on the location of the xpath
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document that will be updated
      * @param namespace
@@ -180,8 +174,6 @@ public class XMLTools {
     /**
      * Takes an xpath and adds a node to the location of the xpath and name of tagName
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document that will be updated
      * @param nodeName
@@ -229,8 +221,6 @@ public class XMLTools {
     /**
      * Takes an xpath and removes a node to the location of the xpath
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            Document: XML Document that will be updated
      * @param xpath
@@ -270,8 +260,6 @@ public class XMLTools {
     /**
      * Takes an xpath and return the value found
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014 *
      * @param doc
      *            Document: XML Document that will be queried
      * @param xpath
@@ -309,8 +297,6 @@ public class XMLTools {
     /**
      * Generate an XML Document from SOAPMessage
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param soapXML
      *            SOAPMessage to transform to XML
      * @return Document xml of SOAPMessage
@@ -350,8 +336,6 @@ public class XMLTools {
     /**
      * Generate an XML Document from String
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xml
      *            String of XML to transform to XML Document
      * @return Document xml of String
@@ -389,8 +373,6 @@ public class XMLTools {
     /**
      * Generate an XML Document from String
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param xml
      *            String of XML to transform to XML Document
      * @return Document xml of String
@@ -424,8 +406,6 @@ public class XMLTools {
     /**
      * Transform a XML Document to String
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            XML Document to transform to String
      * @return xml in String format
@@ -469,8 +449,6 @@ public class XMLTools {
     /**
      * A recursive method that will iterate through all nodes and delete Comment nodes
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param node
      *            XML document
      * @return self
@@ -492,8 +470,6 @@ public class XMLTools {
     /**
      * Iterate through all nodes and remove white space lines
      *
-     * @author Justin Phlegar
-     * @version Created: 08/28/2014
      * @param doc
      *            XML Document
      * @return xml Document after updates
@@ -524,8 +500,6 @@ public class XMLTools {
     /**
      * Transform a XML Document to String
      *
-     * @author Waightstill Avery
-     * @version Created: 08/28/2016
      * @param doc
      *            XML Document
      * @param xpath
@@ -561,8 +535,6 @@ public class XMLTools {
     /**
      * Transform a XML Document to String
      *
-     * @author Waightstill Avery
-     * @version Created: 08/28/2016
      * @param nodeList
      *            Nodelist to look in
      * @param xpath
@@ -597,8 +569,6 @@ public class XMLTools {
     /**
      * Transform a XML Document to String
      *
-     * @author Waightstill Avery
-     * @version Created: 08/28/2016
      * @param nodeList
      *            Nodelist to look in
      * @param xpath

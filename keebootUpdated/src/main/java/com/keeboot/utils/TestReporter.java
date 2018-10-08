@@ -538,7 +538,6 @@ public class TestReporter {
      * This functionality is only available in the chrome browser.
      * IE browser and Firefox do not support at this time (07/21/2017)
      *
-     * @date 07/21/2017
      * @param driver
      */
     public static void logConsoleErrors(KeebootDriver driver) {

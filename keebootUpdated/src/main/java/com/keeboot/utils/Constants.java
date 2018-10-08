@@ -73,8 +73,6 @@ public class Constants {
     /**
      * determine screenshot path
      *
-     * @author Harshith
-     * @date 06/13/2018
      * @return screenshot path
      */
     public static String determineScreenShotPath() {
