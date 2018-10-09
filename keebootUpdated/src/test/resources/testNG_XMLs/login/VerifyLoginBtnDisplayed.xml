@@ -13,7 +13,7 @@
  
 	<test name="VerifyLoginBtnDisplayed">
 		<classes>
-			<class name="loginPage.VerifyLoginBtnDisplayed" />
+			<class name="com.web.login.VerifyLoginBtnDisplayed" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

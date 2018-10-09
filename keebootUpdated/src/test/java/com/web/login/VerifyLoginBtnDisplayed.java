@@ -12,7 +12,7 @@ import com.keeboot.utils.dataProviders.CSVDataProvider;
 public class VerifyLoginBtnDisplayed extends WebBaseTest {
 		@DataProvider(name = "dataScenario", parallel = true)
 	    public Object[][] scenarios() {
-	        return CSVDataProvider.getData("/datasheets/login/VerifyLoginBtnDisplayed.xlxs");
+	        return CSVDataProvider.getData("/datasheets/login/VerifyLoginBtnDisplayed.csv");
 	    }
 
 	    @Test(dataProvider = "dataScenario")
