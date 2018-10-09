@@ -20,10 +20,13 @@ public class VerifyLoginBtnDisplayed extends WebBaseTest {
 
 	        // Start the test and setting the scenario name.
 	        String testName = "VerifyLoginBtnDisplayed";
+	        
 	        TestReporter.logScenario(testScenario);
+	        
 	        testStart(testName);
 	        
 	        LoginPage loginPage = new LoginPage(getDriver());
+	        
 	        loginPage.verifyLoginBtn();
 	        TestReporter.assertTrue( loginPage.verifyLoginBtn(), "Login button displayed");
 		

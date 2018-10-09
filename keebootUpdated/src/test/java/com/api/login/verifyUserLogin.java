@@ -27,8 +27,11 @@ public class verifyUserLogin extends BaseRestTest{
 	        String ApiUrl = "https://api.staging.keeboot.com/login";
 	        
 	        RestService restService = new RestService();
-	        restService.sendGetRequest(ApiUrl);
+	        RestResponse restResponse = null;
 	        
-	        RestResponse restResponse ;
+	        
+	        restService.sendGetRequest(ApiUrl);
+	       restResponse.getResponse();
+	        
 	    }
 }
