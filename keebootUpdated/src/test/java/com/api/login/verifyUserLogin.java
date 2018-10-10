@@ -12,12 +12,12 @@ import com.keeboot.utils.dataProviders.CSVDataProvider;
 public class verifyUserLogin extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
-	    public Object[][] bookScenario() {
+	    public Object[][] verifyUserLogin() {
 	        return CSVDataProvider.getData("\"/datasheets/login/verifyUserLogin.csv");
 	    }
 
 	    @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
-	    public void bookRoomInDMPAndModifyReservation(String testScenario) {
+	    public void verifyUserLogin(String testScenario) {
 
 	        String testName = "verifyUserLogin";
 

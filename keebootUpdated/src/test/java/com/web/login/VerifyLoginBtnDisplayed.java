@@ -29,8 +29,6 @@ public class VerifyLoginBtnDisplayed extends WebBaseTest {
 	        
 	        loginPage.verifyLoginBtn();
 	        TestReporter.assertTrue( loginPage.verifyLoginBtn(), "Login button displayed");
-		
-		
 	    }
 	}
 
