@@ -22,4 +22,8 @@ public class Common {
 	 public static void validateStatusCode(int actStatusCode, int expStatusCode) {
 	        TestReporter.assertTrue(actStatusCode == expStatusCode, "Actual Status code[ " + actStatusCode + " ] is equal to Expected status Code[ " + expStatusCode + " ]");
 	    }
+	 
+	 public String replaceSpecialCharacterInString(String jsonString) {
+	        return jsonString.toString().replaceAll(",", "&").replaceAll("/", "%2F").replaceAll("\"", "").replaceAll(":", "=").replaceAll("\\{", "").replaceAll("\\}", "").replaceAll("@", "%40");
+	    }
 }
