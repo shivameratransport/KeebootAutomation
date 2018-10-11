@@ -1,9 +1,12 @@
 package com.api.login;
 
+import org.json.JSONException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.keeboot.api.APILogin;
 import com.keeboot.api.restServices.BaseRestTest;
+import com.keeboot.api.restServices.Headers.HeaderType;
 import com.keeboot.api.restServices.RestResponse;
 import com.keeboot.api.restServices.RestService;
 import com.keeboot.utils.TestReporter;
@@ -12,26 +15,34 @@ import com.keeboot.utils.dataProviders.CSVDataProvider;
 public class verifyUserLogin extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
-	    public Object[][] verifyUserLogin() {
-	        return CSVDataProvider.getData("\"/datasheets/login/verifyUserLogin.csv");
+	    public Object[][] verifyUserLoggedin() {
+	        return CSVDataProvider.getData("/datasheets/login/verifyUserLogin.csv");
 	    }
 
 	    @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
-	    public void verifyUserLogin(String testScenario) {
+	    public void verifyUserLoggedin(String testScenario) throws JSONException {
 
 	        String testName = "verifyUserLogin";
 
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/login";
+	        String ApiUrl = "https://api.staging.keeboot.com/login/generate-otp";
 	        
 	        RestService restService = new RestService();
-	        RestResponse restResponse = null;
+	     
+	        APILogin apiLogin = new APILogin(getDriver());
 	        
+	        //send otp request-generate otp
+	        String httpBody = apiLogin.formatGenerateOtpBody("9035434312", "KEEBOOT-MAIN-WEB");
+	        RestResponse restResponse=restService.sendPostRequest(ApiUrl,HeaderType.JSON,httpBody);
+	        restResponse.getStatusCode();
+	       
+//	      String cookie =  restResponse.getAllCookies();
+//	      String csrfToken = restResponse.getCookie("csrf-token").split("=")[1];
+//	      String jSessionId = restResponse.getCookie("JSESSIONID").split("=")[1];
 	        
-	        restService.sendGetRequest(ApiUrl);
-	       restResponse.getResponse();
+	        //to read and validate the otp
 	        
 	    }
 }
