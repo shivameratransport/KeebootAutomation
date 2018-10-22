@@ -37,12 +37,7 @@ public class verifyUserLogin extends BaseRestTest{
 	        String httpBody = apiLogin.formatGenerateOtpBody("9035434312", "KEEBOOT-MAIN-WEB");
 	        RestResponse restResponse=restService.sendPostRequest(ApiUrl,HeaderType.JSON,httpBody);
 	        restResponse.getStatusCode();
-	       
-//	      String cookie =  restResponse.getAllCookies();
-//	      String csrfToken = restResponse.getCookie("csrf-token").split("=")[1];
-//	      String jSessionId = restResponse.getCookie("JSESSIONID").split("=")[1];
-	        
-	        //to read and validate the otp
+	    
 	        
 	    }
 }

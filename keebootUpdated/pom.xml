@@ -54,34 +54,15 @@
 		</pluginManagement>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.12</version>
-				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
-					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine>
-					<suiteXmlFiles>
-						<suiteXmlFile>${testNGSourceDirectory}/${suiteXMLName}.xml</suiteXmlFile> 
-					</suiteXmlFiles>
-					<systemPropertyVariables>
-						<jenkinsOperatingSystem>${operatingSystem}</jenkinsOperatingSystem>
-						<jenkinsBrowser>${browser}</jenkinsBrowser>
-						<jenkinsBrowserVersion>${browserVersion}</jenkinsBrowserVersion>
-						<jenkinsRunLocation>${runLocation}</jenkinsRunLocation>
-					</systemPropertyVariables>
-				</configuration>
-				<dependencies>
-					
-				<dependency>
-					<groupId>org.aspectj</groupId>
-					<artifactId>aspectjweaver</artifactId>
-					<version>${aspectj.version}</version>
-				</dependency>
-					
-				</dependencies>
-			</plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.9</version>
+            <configuration>
+                <argLine>
+                    -javaagent:${settings.localRepository}\org\aspectj\aspectjweaver\1.8.3\aspectjweaver-1.8.3.jar
+                </argLine>
+            </configuration>
+        </plugin>
 			
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
@@ -344,6 +325,7 @@
 			<artifactId>jaxen</artifactId>
 			<version>1.1.6</version>
 		</dependency>
+		
 		<!-- End Soap Core requirements -->
 		
 		<!-- Start SQL dependencies -->

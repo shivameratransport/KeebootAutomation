@@ -1,5 +1,6 @@
 package com.web.login;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver.SystemProperty;
@@ -15,32 +16,28 @@ public class Demo extends WebBaseTest{
     }
 	public static void main(String[] args) {
         // declaration and instantiation of objects/variables
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\vikash kumar\\Desktop\\chromedriver_win32\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
     	
-        String baseUrl = "http://demo.guru99.com/test/newtours/";
-        String expectedTitle = "Welcome: Mercury Tours";
-        String actualTitle = "";
+        String baseUrl = "https://www.gmail.com";
+        
 
         // launch Fire fox and direct it to the Base URL
         driver.get(baseUrl);
 
-        // get the actual value of the title
-        actualTitle = driver.getTitle();
-
-        /*
-         * compare the actual title of the page with the expected one and print
-         * the result as "Passed" or "Failed"
-         */
-        if (actualTitle.contentEquals(expectedTitle)){
-            System.out.println("Test Passed!");
-        } else {
-            System.out.println("Test Failed");
-        }
-       
-        //close Fire fox
-        driver.close();
-       
+        driver.findElement(By.xpath("//input[@type='email']")).sendKeys("shivakumar@meratransport.com");
+        
+        driver.findElement(By.xpath("//*[text()='Next']")).click();
+        
+        //driver.findElement(By.xpath("//input[@type='password']")).sendKeys("sairambaba");
+        
+        
+        driver.findElement(By.xpath("//*[text()='Next']")).click();
+        
+        driver.findElement(By.xpath("//*[@class='zA zE']")).click();
+        
+        String otp = driver.findElement(By.xpath("//*[@id=\":2q\"]/div/div/span/text()")).getText();
+        System.out.println(otp);
     }
 
 }
