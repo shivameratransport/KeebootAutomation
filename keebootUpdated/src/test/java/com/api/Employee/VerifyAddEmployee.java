@@ -38,7 +38,7 @@ public class VerifyAddEmployee extends BaseRestTest{
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
 	        
 	        
-	       // TestReporter.assertTrue(restResponse.getResponse().contains("Profile details updated successfully"), "Profile details can be edited and updated");
+	      TestReporter.assertTrue(restResponse.getResponse().contains("employeeId"), "Employee added successfully");
 	        
 	        
 	    }
