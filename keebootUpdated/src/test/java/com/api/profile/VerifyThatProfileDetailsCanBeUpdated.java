@@ -15,7 +15,7 @@ import com.keeboot.api.restServices.Headers.HeaderType;
 import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
 
-public class verifyThatProfileDetailsCanBeUpdated  extends BaseRestTest{
+public class VerifyThatProfileDetailsCanBeUpdated  extends BaseRestTest{
 	
 	@DataProvider(name = "scenario", parallel = true)
 

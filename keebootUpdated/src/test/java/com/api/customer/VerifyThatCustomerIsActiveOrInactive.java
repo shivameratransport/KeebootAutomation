@@ -14,7 +14,7 @@ import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
 import com.keeboot.Common;
 
-public class verifyThatCustomerIsActiveOrInactive extends BaseRestTest{
+public class VerifyThatCustomerIsActiveOrInactive extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
 	    public Object[][] verifyUserLoggedin() {

@@ -12,7 +12,7 @@ import com.keeboot.api.restServices.RestService;
 import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
 
-public class verifyUserLogin extends BaseRestTest{
+public class VerifyUserLogin extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
 	    public Object[][] verifyUserLoggedin() {

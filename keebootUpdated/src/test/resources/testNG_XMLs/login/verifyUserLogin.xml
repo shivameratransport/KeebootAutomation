@@ -13,7 +13,7 @@
  
 	<test name="verifyUserLogin">
 		<classes>
-			<class name="com.api.login.verifyUserLogin" />
+			<class name="com.api.login.VerifyUserLogin" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

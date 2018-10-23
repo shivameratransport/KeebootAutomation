@@ -13,7 +13,7 @@
  
 	<test name="verifyThatProfileDetailsCanBeUpdated">
 		<classes>
-			<class name="com.api.profile.verifyThatProfileDetailsCanBeUpdated" />
+			<class name="com.api.profile.VerifyThatProfileDetailsCanBeUpdated" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
