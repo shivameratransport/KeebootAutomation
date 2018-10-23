@@ -40,7 +40,7 @@ public class VerifyThatEmployeeStatusCanBeUpdated extends BaseRestTest{
 	      String userId=jObject.getJSONArray("response").getJSONObject(5).getString("userId");
 	      String updatedUrl = "https://api.staging.keeboot.com/profile/employee/"+userId;
 	      UpdateEmployee employee = new UpdateEmployee(getDriver());
-	      restService.sendPutRequest(updatedUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "", "", "", "", "", "", "", "","false"));
+	      restService.sendPutRequest(updatedUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "", "", "", "", "", "", "","false"));
 	      
 	      TestReporter.assertTrue(restResponse.getResponse().contains("Profile details updated successfully"), "Employee details updated successfully");
 	      

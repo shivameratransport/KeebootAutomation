@@ -20,7 +20,7 @@ public UpdateEmployee(KeebootDriver driver) {
 
 
 public String formatEmployeeUpdateRequest(String name,String gender,String department,
-		String designation,String phone,String emailId,
+		String designation,String emailId,
 		String reportingToID,String reportingToName,String notes,String address,String city,
 		String state,String isActive ) throws JSONException
 {
@@ -40,10 +40,6 @@ public String formatEmployeeUpdateRequest(String name,String gender,String depar
 	if(designation!="")
 	{
 		 requestParams.put("designation", designation);
-	}
-	if(phone!="")
-	{
-		requestParams.put("phone", phone);
 	}
 	  if(emailId!="")
 	  {

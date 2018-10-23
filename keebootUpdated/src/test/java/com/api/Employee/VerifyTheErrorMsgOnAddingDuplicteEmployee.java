@@ -30,7 +30,7 @@ public class VerifyTheErrorMsgOnAddingDuplicteEmployee extends BaseRestTest{
 	        
 	        String ApiUrl = "https://api.staging.keeboot.com/profile/employee";
 	        
-	        String token = "";
+	        
 	        RestService restService = new RestService();
 	        AddEmployee employee  =new  AddEmployee(getDriver());
 	        String httpBody =employee.formatEmployeeAddRequest("hellooo", "", "1111111111", "", "", "", "", "");
