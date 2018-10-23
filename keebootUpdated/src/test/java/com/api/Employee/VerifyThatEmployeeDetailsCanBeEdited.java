@@ -23,18 +23,20 @@ public class VerifyThatEmployeeDetailsCanBeEdited extends BaseRestTest{
     }
 
     @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
-    public void VerifyThatEmployeeDetailsCanBeEditedinapi(String testScenario, String lastName) throws JSONException {
+    public void VerifyThatEmployeeDetailsCanBeEditedinapi(String testScenario) throws JSONException {
 
         String testName = "VerifyThatEmployeeDetailsCanBeEditedinapi";
 
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/profile/employees";
+        String ApiUrl = "https://api.staging.keeboot.com/profile/employee";
         RestService restService = new RestService();
         UpdateEmployee employee = new UpdateEmployee(getDriver());
        
         RestResponse restResponse=restService.sendPutRequest(ApiUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "01234", "", "", "", "", "", "", ""));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
+        
+        TestReporter.assertTrue(restResponse.getResponse().contains("Profile details updated successfully"), "Employee details updated successfully");
     }
 }
