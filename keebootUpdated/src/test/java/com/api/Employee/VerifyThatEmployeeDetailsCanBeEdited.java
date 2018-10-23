@@ -34,7 +34,7 @@ public class VerifyThatEmployeeDetailsCanBeEdited extends BaseRestTest{
         RestService restService = new RestService();
         UpdateEmployee employee = new UpdateEmployee(getDriver());
        
-        RestResponse restResponse=restService.sendPutRequest(ApiUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "01234", "", "", "", "", "", "", ""));
+        RestResponse restResponse=restService.sendPutRequest(ApiUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "01234", "", "", "", "", "", "", "",""));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         TestReporter.assertTrue(restResponse.getResponse().contains("Profile details updated successfully"), "Employee details updated successfully");

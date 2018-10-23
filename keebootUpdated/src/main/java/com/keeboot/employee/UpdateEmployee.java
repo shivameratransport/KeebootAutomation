@@ -22,7 +22,7 @@ public UpdateEmployee(KeebootDriver driver) {
 public String formatEmployeeUpdateRequest(String name,String gender,String department,
 		String designation,String phone,String emailId,
 		String reportingToID,String reportingToName,String notes,String address,String city,
-		String state ) throws JSONException
+		String state,String isActive ) throws JSONException
 {
 	JSONObject requestParams = new JSONObject();
 	if(name!="")
@@ -73,6 +73,10 @@ public String formatEmployeeUpdateRequest(String name,String gender,String depar
 	   if(state!="")
 	   {
 		   requestParams.put("state", state);
+	   }
+	   if(isActive!="")
+	   {
+		   requestParams.put("isActive", isActive);
 	   }
 	  
 	   
