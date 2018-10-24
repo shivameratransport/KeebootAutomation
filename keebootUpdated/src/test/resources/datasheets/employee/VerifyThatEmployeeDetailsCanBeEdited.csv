@@ -1,2 +1,2 @@
-Scenario
-verifyThatCustomerIsActiveOrInactive
+Scenario,gender
+VerifyThatEmployeeDetailsCanBeEdited,Female

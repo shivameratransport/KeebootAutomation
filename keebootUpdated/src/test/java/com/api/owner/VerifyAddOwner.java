@@ -11,8 +11,10 @@ import com.keeboot.api.restServices.RestResponse;
 import com.keeboot.api.restServices.RestService;
 import com.keeboot.api.restServices.Headers.HeaderType;
 import com.keeboot.owner.AddOwner;
+import com.keeboot.utils.Randomness;
 import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
+
 
 public class VerifyAddOwner extends BaseRestTest { 
 	@DataProvider(name = "scenario", parallel = true)
@@ -31,9 +33,11 @@ public class VerifyAddOwner extends BaseRestTest {
         
         String ApiUrl = "https://api.staging.keeboot.com/owner";
         RestService restService = new RestService();
-        
+       int mobileNum =  Randomness.randomNumberBetween(1111111111,999999999);
+      String ownerName =  Randomness.randomString(5);
+       
         AddOwner owner = new AddOwner(getDriver());
-        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,owner.formatOwnerRequest("", "", "", "", ""));
+        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,owner.formatOwnerRequest(ownerName,mobileNum+"", "", "", ""));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         JSONObject jobject = new JSONObject(restResponse.getResponse());

@@ -17,7 +17,7 @@ public class VerifyThatEmployeeIsActiveByDefault extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
 	    public Object[][] verifyUserLoggedin() {
-	        return CSVDataProvider.getData("/datasheets/employee/VerifyThatEmployeeDetailsCanBeEdited.csv");
+	        return CSVDataProvider.getData("/datasheets/employee/VerifyThatEmployeeIsActiveByDefault.csv");
 	    }
 
 	    @Test(groups = { "login verification", "VerifyThatEmployeeIsActiveByDefault" }, dataProvider = "scenario")

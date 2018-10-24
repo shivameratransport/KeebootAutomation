@@ -18,11 +18,11 @@ public class VerifyThatEmployeeStatusCanBeUpdated extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
 	    public Object[][] verifyUserLoggedin() {
-	        return CSVDataProvider.getData("/datasheets/employee/VerifyThatEmployeeDetailsCanBeEdited.csv");
+	        return CSVDataProvider.getData("/datasheets/employee/VerifyThatEmployeeStatusCanBeUpdated.csv");
 	    }
 
 	    @Test(groups = { "login verification", "VerifyThatEmployeeIsActiveByDefault" }, dataProvider = "scenario")
-	    public void VerifyThatEmployeeIsActiveByDefaultInApi(String testScenario) throws JSONException {
+	    public void VerifyThatEmployeeIsActiveByDefaultInApi(String testScenario,String isActive) throws JSONException {
 
 	        String testName = "VerifyThatEmployeeIsActiveByDefault";
 
@@ -37,12 +37,12 @@ public class VerifyThatEmployeeStatusCanBeUpdated extends BaseRestTest{
 	        
 	        JSONObject jObject = new JSONObject(restResponse.getResponse());
 	        
-	      String userId=jObject.getJSONArray("response").getJSONObject(5).getString("userId");
-	      String updatedUrl = "https://api.staging.keeboot.com/profile/employee/"+userId;
+	      String employeeId=jObject.getJSONArray("response").getJSONObject(5).getString("employeeId");
+	      String updatedUrl = "https://api.staging.keeboot.com/profile/employee/"+employeeId;
 	      UpdateEmployee employee = new UpdateEmployee(getDriver());
-	      restService.sendPutRequest(updatedUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "", "", "", "", "", "", "","false"));
+	      restService.sendPutRequest(updatedUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "", "", "", "", "", "", "",isActive));
 	      
-	      TestReporter.assertTrue(restResponse.getResponse().contains("Profile details updated successfully"), "Employee details updated successfully");
+	      TestReporter.assertTrue(restResponse.getResponse().contains("statusCode"), "Employee details updated successfully");
 	      
 
 	    }

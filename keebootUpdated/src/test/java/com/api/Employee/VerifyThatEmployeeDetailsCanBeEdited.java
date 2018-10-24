@@ -1,6 +1,7 @@
 package com.api.Employee;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,6 @@ import com.keeboot.api.restServices.RestResponse;
 import com.keeboot.api.restServices.RestService;
 import com.keeboot.employee.UpdateEmployee;
 import com.keeboot.api.restServices.Headers.HeaderType;
-import com.keeboot.profile.ProfileEmployee;
 import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
 
@@ -23,7 +23,7 @@ public class VerifyThatEmployeeDetailsCanBeEdited extends BaseRestTest{
     }
 
     @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
-    public void VerifyThatEmployeeDetailsCanBeEditedinapi(String testScenario) throws JSONException {
+    public void VerifyThatEmployeeDetailsCanBeEditedinapi(String testScenario,String gender) throws JSONException {
 
         String testName = "VerifyThatEmployeeDetailsCanBeEditedinapi";
 
@@ -33,10 +33,15 @@ public class VerifyThatEmployeeDetailsCanBeEdited extends BaseRestTest{
         String ApiUrl = "https://api.staging.keeboot.com/profile/employee";
         RestService restService = new RestService();
         UpdateEmployee employee = new UpdateEmployee(getDriver());
+        
+        RestResponse restResponse=restService.sendGetRequest(ApiUrl+"s", HeaderType.JSON);
+        
+        JSONObject jObject = new JSONObject(restResponse.getResponse());
+
+        String employeeId=jObject.getJSONArray("response").getJSONObject(5).getString("employeeId");
        
-        RestResponse restResponse=restService.sendPutRequest(ApiUrl+"/7FA5E9491FF145C7B71528EA9C9AB6EA", HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "Female", "", "", "", "", "", "", "", "", "",""));
+         restResponse=restService.sendPutRequest(ApiUrl+"/"+employeeId, HeaderType.JSON, employee.formatEmployeeUpdateRequest("",gender, "", "", "", "", "", "", "", "", "",""));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
-       // TestReporter.assertTrue(restResponse.getResponse().contains("Profile details updated successfully"), "Employee details updated successfully");
     }
 }
