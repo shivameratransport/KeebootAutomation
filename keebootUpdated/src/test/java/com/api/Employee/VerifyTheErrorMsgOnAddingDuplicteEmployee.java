@@ -18,7 +18,7 @@ public class VerifyTheErrorMsgOnAddingDuplicteEmployee extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
 	    public Object[][] verifyUserLoggedin() {
-	        return CSVDataProvider.getData("/datasheets/employee/VerifyThatEmployeeDetailsCanBeEdited.csv");
+	        return CSVDataProvider.getData("/datasheets/employee/VerifyTheErrorMsgOnAddingDuplicteEmployee.csv");
 	    }
 
 	    @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
@@ -35,11 +35,11 @@ public class VerifyTheErrorMsgOnAddingDuplicteEmployee extends BaseRestTest{
 	        RestService restService = new RestService();
 	        AddEmployee employee  =new  AddEmployee(getDriver());
 	        
-	        int mobileNum =  Randomness.randomNumberBetween(1111111111,999999999);
+	        int mobileNum =  Randomness.randomNumberBetween(111111111,999999999);
 	        String employeeName =  Randomness.randomString(5);
 	        
 	        
-	        String httpBody =employee.formatEmployeeAddRequest(employeeName, "", mobileNum+"", "", "", "", "", "");
+	        String httpBody =employee.formatEmployeeAddRequest(employeeName, "", "9"+mobileNum+"", "", "", "", "", "");
 	        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody );
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
 	        
@@ -47,7 +47,7 @@ public class VerifyTheErrorMsgOnAddingDuplicteEmployee extends BaseRestTest{
 	      TestReporter.assertTrue(restResponse.getResponse().contains("employeeId"), "Employee added successfully");
 	      
 	      //trying to add the duplicate entry of employee
-	      httpBody =employee.formatEmployeeAddRequest(employeeName, "",  mobileNum+"", "", "", "", "", "");
+	      httpBody =employee.formatEmployeeAddRequest(employeeName, "",  "9"+mobileNum+"", "", "", "", "", "");
 	       restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody );
 	       Common.validateStatusCode(restResponse.getStatusCode(),200);
 	       

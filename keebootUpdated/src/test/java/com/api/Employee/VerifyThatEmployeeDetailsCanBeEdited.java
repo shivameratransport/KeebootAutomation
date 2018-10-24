@@ -35,6 +35,7 @@ public class VerifyThatEmployeeDetailsCanBeEdited extends BaseRestTest{
         UpdateEmployee employee = new UpdateEmployee(getDriver());
         
         RestResponse restResponse=restService.sendGetRequest(ApiUrl+"s", HeaderType.JSON);
+        Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         JSONObject jObject = new JSONObject(restResponse.getResponse());
 
