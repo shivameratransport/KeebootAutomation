@@ -22,7 +22,7 @@ public UpdateEmployee(KeebootDriver driver) {
 public String formatEmployeeUpdateRequest(String name,String gender,String department,
 		String designation,String emailId,
 		String reportingToID,String reportingToName,String notes,String address,String city,
-		String state,String isActive ) throws JSONException
+		String state,String isActive) throws JSONException
 {
 	JSONObject requestParams = new JSONObject();
 	if(name!="")
@@ -74,13 +74,14 @@ public String formatEmployeeUpdateRequest(String name,String gender,String depar
 	   {
 		   requestParams.put("isActive", isActive);
 	   }
-	  
+	 
 	   
 	   return requestParams.toString();
 }
 }
 
-
+//while updating, separate methods has to be written based on the get response
+// separate format methods for bank details, contact details,personal details,others,address
 
 //"name": "2",
 //"gender": "Male",
