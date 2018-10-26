@@ -10,21 +10,20 @@ import com.keeboot.api.restServices.BaseRestTest;
 import com.keeboot.api.restServices.RestResponse;
 import com.keeboot.api.restServices.RestService;
 import com.keeboot.api.restServices.Headers.HeaderType;
-import com.keeboot.location.AddLocation;
 import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
 
-public class VerifyAddLocation extends BaseRestTest{
+public class VerifyDeleteLocation extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
-	    public Object[][] verifyAddLocation() {
-	        return CSVDataProvider.getData("/datasheets/fuelcard/VerifyAddFuelCard.csv");
+	    public Object[][] verifyDeleteLocation() {
+	        return CSVDataProvider.getData("/datasheets/location/VerifyDeleteLocation.csv");
 	    }
 
-	    @Test(groups = { "verify that location can be added", "VerifyAddLocation" }, dataProvider = "scenario")
-	    public void verifyAddLocation(String testScenario) throws JSONException {
+	    @Test(groups = { "verify if the location can be deleted", "VerifyDeleteLocation" }, dataProvider = "scenario")
+	    public void verifyDeleteLocation(String testScenario) throws JSONException {
 
-	        String testName = "VerifyAddFuelCard";
+	        String testName = "VerifyDeleteLocation";
 
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
@@ -32,14 +31,13 @@ public class VerifyAddLocation extends BaseRestTest{
 	        String ApiUrl = "https://api.staging.keeboot.com/location";
 	        
 	        RestService restService = new RestService();
-	        AddLocation location = new AddLocation(getDriver());
+	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);
 	        
-	        String httpBody =location.formatLocationAddRequest("", "", "", "", "", "", "", "", "", "True");
-	        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody);
-	        
+	        JSONObject jObject = new JSONObject(restResponse.getResponse());
+	        String locationId =jObject.getJSONArray("response").getJSONObject(0).getString("locationId");
+	       
+	       restResponse = restService.sendDeleteRequest(ApiUrl+"/"+locationId,HeaderType.JSON);
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
-	        
-	        JSONObject jobject = new JSONObject(restResponse.getResponse());
 	        
 	    }
 }
