@@ -1,6 +1,7 @@
 package com.api.fuelcard;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -41,5 +42,11 @@ public class VerifyAddFuelCard extends BaseRestTest{
 	        String httpBody =fuelcard.formatFuelCardAddRequest(cardNumber+"", "paytm", "", "", vehicleNumber);
 	        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody );
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
+	        
+	        JSONObject jobject = new JSONObject(restResponse.getResponse());
+	      int serialNo=jobject.getJSONObject("response").getInt("slNo");
+	   
+	      
+	      TestReporter.assertTrue(serialNo!=0, "A new fuel card has been added");
 	    }
 }
