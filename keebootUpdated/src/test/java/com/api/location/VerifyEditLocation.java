@@ -19,11 +19,11 @@ public class VerifyEditLocation extends BaseRestTest{
 	@DataProvider(name = "scenario", parallel = true)
 
     public Object[][] verifyEditLocation() {
-        return CSVDataProvider.getData("/datasheets/fuelcard/VerifyEditLocation.csv");
+        return CSVDataProvider.getData("/datasheets/location/VerifyEditLocation.csv");
     }
 
     @Test(groups = { "verify that location can be edited", "VerifyEditLocation" }, dataProvider = "scenario")
-    public void verifyEditLocation(String testScenario) throws JSONException {
+    public void verifyEditLocation(String testScenario,String city) throws JSONException {
 
         String testName = "VerifyEditLocation";
 
@@ -42,7 +42,7 @@ public class VerifyEditLocation extends BaseRestTest{
         String locationId=jObject.getJSONArray("response").getJSONObject(0).getString("locationId");
         
        EditLocation location = new EditLocation(getDriver());
-       restResponse=restService.sendPutRequest(ApiUrl+"/"+locationId, HeaderType.JSON,location.formatLocationEditRequest("", "", "", "", "", "", ""));
+       restResponse=restService.sendPutRequest(ApiUrl+"/"+locationId, HeaderType.JSON,location.formatLocationEditRequest("", "", city, "", "", "", ""));
        Common.validateStatusCode(restResponse.getStatusCode(),200);
        
     }

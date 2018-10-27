@@ -33,11 +33,13 @@ public class VerifyAddOwner extends BaseRestTest {
         
         String ApiUrl = "https://api.staging.keeboot.com/owner";
         RestService restService = new RestService();
-       int mobileNum =  Randomness.randomNumberBetween(1111111111,999999999);
+       int mobileNum =  Randomness.randomNumberBetween(111111111,999999999);
       String ownerName =  Randomness.randomString(5);
-       
+      
+      String address =  Randomness.randomString(5);
+     String panNumber =   Randomness.randomNumber(5);
         AddOwner owner = new AddOwner(getDriver());
-        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,owner.formatOwnerRequest(ownerName,mobileNum+"", "", "", ""));
+        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,owner.formatOwnerRequest(ownerName,"9"+mobileNum+"",panNumber, address, ""));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         JSONObject jobject = new JSONObject(restResponse.getResponse());

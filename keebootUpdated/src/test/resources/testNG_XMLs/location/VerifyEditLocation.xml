@@ -11,9 +11,9 @@
 	<parameter name="application" value="defaultUrl" />
 	<parameter name="logLevel" value="INFO" />
  
-	<test name="VerifyAddEmployee">
+	<test name="VerifyEditLocation">
 		<classes>
-			<class name="com.api.Employee.VerifyAddEmployee" />
+			<class name="com.api.location.VerifyEditLocation" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

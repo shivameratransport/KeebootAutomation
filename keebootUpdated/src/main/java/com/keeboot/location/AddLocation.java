@@ -1,5 +1,6 @@
 package com.keeboot.location;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,27 +19,30 @@ public class AddLocation {
        // Build the page area.
        this.driver = driver;
    }
+   
+   
    public String formatLocationAddRequest(String type,String radius,String lat,String lng,
-		   String address,String locationCode,String state,String city,String locationType,String isActive) throws JSONException
+		   String address,String locationCode,String state,String city,String locationType,Boolean isActive ) throws JSONException
    {
-	   JSONObject requestParams = new JSONObject();
-	   
+	   JSONObject requestParams = new JSONObject(); 
+	   JSONObject geoLocation = new JSONObject(); 
+	   JSONObject obj = new JSONObject(); 
+	   JSONObject geoFence = new JSONObject();
+	   JSONArray jsonArray = new JSONArray();
+	   obj.put("lat", lat);
+	   obj.put("lng", lng);
+	   jsonArray.put(obj);
+	   geoFence.put("center", jsonArray);
 	   type = "circle";
+	   geoFence.put("type", type);
+	   radius = "1000";
+	   geoFence.put("radius", radius);
+	  requestParams.put("geoFence", geoFence);
+	 	geoLocation.put("lat", lat);
+	   geoLocation.put("lng", lng);
+	   requestParams.put("geoLocation", geoLocation);
 	   
-	   requestParams.put("type", type);
-	   
-	   if(radius!="") 
-	   {
-	   requestParams.put("radius", radius);
-	   }
-	   if(lat!="") 
-	   {
-	   requestParams.put("lat", lat);
-	   }
-	   if(lng!="") 
-	   {
-	   requestParams.put("lng", lng);
-	   }
+	  
 	   if(address!="") 
 	   {
 	   requestParams.put("address", address);
@@ -59,11 +63,8 @@ public class AddLocation {
 	   {
 	   requestParams.put("locationType", locationType);
 	   } 
-	   
-	   if(isActive!="") 
-	   {
+	   requestParams.put("description", address);
 	   requestParams.put("isActive", isActive);
-	   } 
 	   return requestParams.toString();
    } 
 }

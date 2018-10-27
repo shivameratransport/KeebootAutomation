@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="defaultUrl" parallel="tests" thread-count="1" data-provider-thread-count="1" verbose="1">
+
+<listeners>
+		<listener class-name="com.keeboot.utils.listeners.TestListener" />
+		<listener class-name="com.keeboot.utils.listeners.TestNGCustomEmailReportSummary" />
+		<listener class-name="com.keeboot.utils.listeners.TestNGCustomEmailReportDetail" />
+		<listener class-name="com.keeboot.utils.listeners.TestNGCustomEmailReportDetailTrace" />
+	</listeners>
+
+
+	<parameter name="browserUnderTest" value="chrome" />
+	<parameter name="environment" value="QA" />
+	<parameter name="runLocation" value="local" />
+	<parameter name="reportToMustard" value="false" />
+	<parameter name="browserVersion" value="" />
+	<parameter name="operatingSystem" value="windows 7" />
+	<parameter name="application" value="defaultUrl" />
+	<parameter name="logLevel" value="INFO" />
+ 
+	<test name="location module">
+		<classes>
+			<class name="com.api.location.VerifyEditLocation" />
+			<class name="com.api.location.VerifyDeleteLocation" />
+		</classes>
+	</test>
+	
+	<test name="employee module">
+		<classes>
+		<class name="com.api.Employee.VerifyAddEmployee" />
+		<class name="com.api.Employee.VerifyDeleteEmployee" />
+		<class name="com.api.Employee.VerifyThatEmployeeDetailsCanBeEdited" />	
+		<class name="com.api.Employee.VerifyThatEmployeeIsActiveByDefault" />
+		<class name="com.api.Employee.VerifyThatEmployeeStatusCanBeUpdated" />	
+		<class name="com.api.Employee.VerifyTheErrorMsgOnAddingDuplicteEmployee" />
+		</classes>
+	</test>
+	
+	<test name="fuel card module">
+		<classes>
+		<class name="com.api.fuelcard.VerifyAddFuelCard" />
+		<class name="com.api.fuelcard.VerifyDeleteFuelCard" />
+		<class name="com.api.fuelcard.VerifyEditFuelCard" />
+		<class name="com.api.fuelcard.VerifyThatDuplicateFuelCardCantBeAdded" />
+		</classes>
+	</test>
+	<test name="owner module">
+		<classes>
+		<class name="com.api.owner.VerifyAddOwner" />
+		<class name="com.api.owner.VerifyDeleteOwner" />
+		<class name="com.api.owner.VerifyEditOwner" />
+		<class name="com.api.owner.VerifyThatDuplicateOwnerCantBeAdded" />
+		</classes>
+	</test>
+	<test name="profile module">
+		<classes>
+		<class name="com.api.profile.VerifyThatProfileDetailsCanBeUpdated" />
+		<class name="com.api.customer.VerifyThatCustomerIsActiveOrInactive" />
+		</classes>
+	</test>
+	<test name="login module">
+		<classes>
+		<class name="com.api.login.VerifyUserLogin" />
+		</classes>
+	</test>
+	
+	
+</suite> <!-- Suite -->
