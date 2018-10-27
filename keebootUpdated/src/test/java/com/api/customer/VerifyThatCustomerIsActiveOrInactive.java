@@ -21,10 +21,10 @@ public class VerifyThatCustomerIsActiveOrInactive extends BaseRestTest{
 	        return CSVDataProvider.getData("/datasheets/customer/verifyThatCustomerIsActiveOrInactive.csv");
 	    }
 
-	    @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
+	    @Test(groups = { "verification", "VerifyThatCustomerIsActiveOrInactive" }, dataProvider = "scenario")
 	    public void verifyThatCustomerIsActiveOrInactiveApi(String testScenario) throws JSONException {
 
-	        String testName = "verifyUserLogin";
+	        String testName = "VerifyThatCustomerIsActiveOrInactive";
 
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);

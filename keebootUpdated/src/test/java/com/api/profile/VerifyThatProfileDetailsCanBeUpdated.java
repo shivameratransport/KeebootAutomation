@@ -21,10 +21,10 @@ public class VerifyThatProfileDetailsCanBeUpdated  extends BaseRestTest{
         return CSVDataProvider.getData("/datasheets/profile/verifyThatProfileDetailsCanBeUpdated.csv");
     }
 
-    @Test(groups = { "login verification", "verifyUserLogin" }, dataProvider = "scenario")
+    @Test(groups = { "verification", "VerifyThatProfileDetailsCanBeUpdated" }, dataProvider = "scenario")
     public void verifyThatProfileDetailsCanBeUpdatedinapi(String testScenario, String lastName) throws JSONException {
 
-        String testName = "verifyUserLogin";
+        String testName = "VerifyThatProfileDetailsCanBeUpdated";
 
         TestReporter.logScenario(testScenario);
         testStart(testName);

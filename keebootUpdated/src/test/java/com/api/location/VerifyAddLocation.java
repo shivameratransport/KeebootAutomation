@@ -1,10 +1,8 @@
 package com.api.location;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.keeboot.Common;
 import com.keeboot.api.restServices.BaseRestTest;
 import com.keeboot.api.restServices.RestResponse;
@@ -26,7 +24,7 @@ public class VerifyAddLocation extends BaseRestTest{
 	    public void verifyAddLocation(String testScenario,String lat,
 	    		String lng,String address,String state,String city,String locationType) throws JSONException {
 
-	        String testName = "VerifyAddFuelCard";
+	        String testName = "verifyAddLocation";
 
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
