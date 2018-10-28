@@ -23,24 +23,24 @@ public class AddFuelCard {
 	   {
 		   JSONObject requestParams = new JSONObject();
 		   
-		   if(cardNumber!="") 
+		   if(!cardNumber.equals("")) 
 		   {
 		   requestParams.put("cardNumber", cardNumber);
 		   }
 		   
-		   if(cardProvider!="") 
+		   if(!cardProvider.equals("")) 
 		   {
 		   requestParams.put("cardProvider", cardProvider);
 		   }
-		   if(cardLimit!="") 
+		   if(!cardLimit.equals("")) 
 		   {
 		   requestParams.put("cardLimit", cardLimit);
 		   }
-		   if(cardExpiryDate!="") 
+		   if(!cardExpiryDate.equals("")) 
 		   {
 		   requestParams.put("cardExpiryDate", cardExpiryDate);
 		   }
-		   if(vehicleNumber!="") 
+		   if(!vehicleNumber.equals("")) 
 		   {
 		   requestParams.put("vehicleNumber", vehicleNumber);
 		   }

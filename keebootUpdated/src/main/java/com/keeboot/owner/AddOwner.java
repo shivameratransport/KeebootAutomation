@@ -22,23 +22,23 @@ public String formatOwnerRequest(String name,String mobileNumber,String PAN,
 		String address,String emailId) throws JSONException
 {
 	JSONObject requestParams = new JSONObject();
-	if(name!="")
+	if(!name.equals(""))
 	{
 	   requestParams.put("name", name);
 	}
-	if(mobileNumber!="")
+	if(!mobileNumber.equals(""))
 	{
 		 requestParams.put("mobileNumber", mobileNumber);
 	}
-	if(PAN!="")
+	if(!PAN.equals(""))
 	{
 		 requestParams.put("PAN", PAN);
 	}
-	if(address!="")
+	if(!address.equals(""))
 	{
 		requestParams.put("address", address);
 	}
-	if(emailId!="")
+	if(!emailId.equals(""))
 	{
 		requestParams.put("emailId", emailId);
 	}

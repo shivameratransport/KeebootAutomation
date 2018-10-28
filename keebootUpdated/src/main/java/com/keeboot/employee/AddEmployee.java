@@ -23,29 +23,29 @@ public class AddEmployee {
    {
 	   JSONObject requestParams = new JSONObject();
 	   requestParams.put("name", name);
-	   if(title!="") //if nothing is passed as parameter, do nothing(default value1)
+	   if(!title.equals("")) //if nothing is passed as parameter, do nothing(default value1)
 	   {
 	   requestParams.put("title", title);
 	   }
 	   requestParams.put("mobileNumber", mobileNumber); //mobile number  is mandatory
 	   
-	   if(isActive!="")
+	   if(!isActive.equals(""))
 	   {
 	   requestParams.put("isActive", isActive);
 	   }
-	   if(emailId!="")
+	   if(!emailId.equals(""))
 	   {
 	   requestParams.put("emailId", emailId);
 	   }
-	   if(gender!="")
+	   if(!gender.equals(""))
 	   {
 	   requestParams.put("gender", gender);
 	   }
-	   if(department!="")
+	   if(!department.equals(""))
 	   {
 	   requestParams.put("department", department);
 	   }
-	   if(designation!="")
+	   if(!designation.equals(""))
 	   {
 	   requestParams.put("designation", designation);
 	   }

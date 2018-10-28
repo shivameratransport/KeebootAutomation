@@ -24,36 +24,36 @@ public String formatLocationEditRequest(String locationCode,String state,String 
 {
 	   JSONObject requestParams = new JSONObject();
 
-	   if(locationCode!="") 
+	   if(!locationCode.equals("")) 
 	   {
 	   requestParams.put("locationCode", locationCode);
 	   }
 	   
-	   if(state!="") 
+	   if(!state.equals("")) 
 	   {
 	   requestParams.put("state", state);
 	   }
 	   
-	   if(city!="") 
+	   if(!city.equals("")) 
 	   {
 	   requestParams.put("city", city);
 	   }
-	   if(zip!="") 
+	   if(!zip.equals("")) 
 	   {
 	   requestParams.put("zip", zip);
 	   }
 	   
-	   if(country!="") 
+	   if(!country.equals("")) 
 	   {
 	   requestParams.put("country", country);
 	   }
 	   
-	   if(locationType!="") 
+	   if(!locationType.equals("")) 
 	   {
 	   requestParams.put("locationType", locationType);
 	   }
 	   
-	   if(isActive!="") 
+	   if(!isActive.equals("")) 
 	   {
 	   requestParams.put("isActive", isActive);
 	   }

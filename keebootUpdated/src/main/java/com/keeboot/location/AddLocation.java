@@ -43,23 +43,23 @@ public class AddLocation {
 	   requestParams.put("geoLocation", geoLocation);
 	   
 	  
-	   if(address!="") 
+	   if(!address.equals("")) 
 	   {
 	   requestParams.put("address", address);
 	   } 
-	   if(locationCode!="") 
+	   if(!locationCode.equals("")) 
 	   {
 	   requestParams.put("locationCode", locationCode);
 	   } 
-	   if(state!="") 
+	   if(!state.equals("")) 
 	   {
 	   requestParams.put("state", state);
 	   } 
-	   if(city!="") 
+	   if(!city.equals("")) 
 	   {
 	   requestParams.put("city", city);
 	   } 
-	   if(locationType!="") 
+	   if(!locationType.equals("")) 
 	   {
 	   requestParams.put("locationType", locationType);
 	   } 

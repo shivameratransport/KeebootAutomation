@@ -25,52 +25,52 @@ public String formatEmployeeUpdateRequest(String name,String gender,String depar
 		String state,String isActive) throws JSONException
 {
 	JSONObject requestParams = new JSONObject();
-	if(name!="")
+	if(!name.equals(""))
 	{
 	   requestParams.put("name", name);
 	}
-	if(gender!="")
+	if(!gender.equals(""))
 	{
 	   requestParams.put("gender", gender);
 	}
-	if(department!="")
+	if(!department.equals(""))
 	{
 	   requestParams.put("department", department);
 	}
-	if(designation!="")
+	if(!designation.equals(""))
 	{
 		 requestParams.put("designation", designation);
 	}
-	  if(emailId!="")
+	  if(!emailId.equals(""))
 	  {
 		  requestParams.put("emailId", emailId);
 	  }
-	   if(reportingToID!="")
+	   if(!reportingToID.equals(""))
 	   {
 		   requestParams.put("reportingToID", reportingToID);
 	   }
 	  
-	  if(reportingToName!="")
+	  if(!reportingToName.equals(""))
 	  {
 		  requestParams.put("reportingToName", reportingToName);
 	  }
-	  if(notes!="")
+	  if(!notes.equals(""))
 	  {
 		  requestParams.put("notes", notes);  
 	  }
-	  if(address!="")
+	  if(!address.equals(""))
 	  {
 		  requestParams.put("address", address);
 	  }
-	  if(city!="")
+	  if(!city.equals(""))
 	  {
 		  requestParams.put("city", city);
 	  }
-	   if(state!="")
+	   if(!state.equals(""))
 	   {
 		   requestParams.put("state", state);
 	   }
-	   if(isActive!="")
+	   if(!isActive.equals(""))
 	   {
 		   requestParams.put("isActive", isActive);
 	   }
