@@ -19,21 +19,23 @@ public AddDriver(KeebootDriver driver) {
 }
 
 
-public String formatEmployeeAddRequest(String name,String ownershipType,String mobileNumber) throws JSONException
+public String formatDriverRequest(String name,String ownershipType,String mobileNumber) throws JSONException
 {
 	   JSONObject requestParams = new JSONObject();
 	   
 	   
-	   
+	   if(!name.equals(""))
+	   {
 	   requestParams.put("name", name);
-	   
+	   }
 	   if(!ownershipType.equals(""))
 	   {
 	   requestParams.put("ownershipType", ownershipType);
 	   }
-
+	   if(!mobileNumber.equals(""))
+	   {
 	   requestParams.put("mobileNumber", mobileNumber);
-	   
+	   }
 	   
 	   
 	   return requestParams.toString();
