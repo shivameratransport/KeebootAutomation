@@ -1,4 +1,4 @@
-package com.api.owner;
+package com.api.fleet;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,33 +13,35 @@ import com.keeboot.api.restServices.Headers.HeaderType;
 import com.keeboot.utils.TestReporter;
 import com.keeboot.utils.dataProviders.CSVDataProvider;
 
-public class VerifyDeleteOwner extends BaseRestTest{
+public class VerifyDeleteFleet extends BaseRestTest{
 	 @DataProvider(name = "scenario", parallel = true)
 
-	    public Object[][] verifyDeleteOwner() {
-	        return CSVDataProvider.getData("/datasheets/employee/VerifyDeleteEmployee.csv");
+	    public Object[][] verifyDeleteFleet() {
+	        return CSVDataProvider.getData("/datasheets/fleet/VerifyDeleteFleet.csv");
 	    }
 
-	    @Test(groups = { "login verification", "VerifyDeleteOwner" }, dataProvider = "scenario")
-	    public void verifyDeleteOwner(String testScenario) throws JSONException {
+	    @Test(groups = { "delete fleet verification", "VerifyDeleteFleet" }, dataProvider = "scenario")
+	    public void verifyDeleteFleet(String testScenario) throws JSONException {
 
-	        String testName = "VerifyDeleteOwner";
+	        String testName = "VerifyDeleteFleet";
 
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/owner";
+	        String ApiUrl = "https://api.staging.keeboot.com/vehicle";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);
-	        
-	        JSONObject jObject = new JSONObject(restResponse.getResponse());
-
-	        String ownerId=jObject.getJSONArray("response").getJSONObject(0).getString("ownerId");
-	         restResponse = restService.sendDeleteRequest(ApiUrl+"/"+ownerId,HeaderType.JSON);
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
 	        
-	        TestReporter.assertTrue(restResponse.getResponse().contains("statusCode"), "owner deleted successfully");
+	        JSONObject jObject = new JSONObject(restResponse.getResponse());
+	       String vehicleId = jObject.getJSONArray("response").getJSONObject(0).getString("vehicleId");
+	        
+	       	restResponse = restService.sendDeleteRequest(ApiUrl+"/"+vehicleId,HeaderType.JSON);
+	        Common.validateStatusCode(restResponse.getStatusCode(),200);
+	        
+	        
+	        TestReporter.assertTrue(restResponse.getResponse().contains("statusCode"), "fleet deleted successfully");
 	        
 	    }
 }
