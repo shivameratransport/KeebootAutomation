@@ -38,7 +38,7 @@ public class VerifyEditFleet extends BaseRestTest{
         RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
-        JSONObject jObject = new JSONObject(restResponse.getResponse());
+       JSONObject jObject = new JSONObject(restResponse.getResponse());
        String vehicleId = jObject.getJSONArray("response").getJSONObject(0).getString("vehicleId");
        
        restResponse=restService.sendPutRequest(ApiUrl+"/"+vehicleId, HeaderType.JSON,fleet.formatFleetRequest("", "", "", "", "", model, "", "", ""));
