@@ -111,8 +111,8 @@ public String formatIndentAddRequest(String customerName,String customerId,Strin
 	   }
 	   requestParams.put("from", from);
 	   requestParams.put("to", to);
-	   JSONArray orderId = new JSONArray();
-	   requestParams.put("orderId", orderId);
+	  // JSONArray orderId = new JSONArray();
+	  // requestParams.put("orderId", orderId);
 	   return requestParams.toString();
 }
 }

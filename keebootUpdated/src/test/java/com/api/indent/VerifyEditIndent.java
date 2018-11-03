@@ -4,13 +4,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.keeboot.Common;
 import com.keeboot.api.restServices.BaseRestTest;
 import com.keeboot.api.restServices.RestResponse;
 import com.keeboot.api.restServices.RestService;
 import com.keeboot.api.restServices.Headers.HeaderType;
-import com.keeboot.customer.AddCustomer;
 import com.keeboot.indent.AddIndent;
 import com.keeboot.utils.Randomness;
 import com.keeboot.utils.TestReporter;
