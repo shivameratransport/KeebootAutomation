@@ -35,7 +35,10 @@ public class VerifyDeleteEmployee extends BaseRestTest{
 	        
 	        JSONObject jObject = new JSONObject(restResponse.getResponse());
 
-	        String employeeId=jObject.getJSONArray("response").getJSONObject(5).getString("employeeId");
+	        String employeeId=jObject.getJSONArray("response").getJSONObject(0).getString("employeeId");
+	        
+	        TestReporter.logStep("The employee id to be deleted is " + employeeId);
+	        
 	         restResponse = restService.sendDeleteRequest(ApiUrl+"/"+employeeId,HeaderType.JSON);
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
 	        
