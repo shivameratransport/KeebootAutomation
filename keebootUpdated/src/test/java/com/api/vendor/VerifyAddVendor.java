@@ -35,7 +35,7 @@ public class VerifyAddVendor  extends BaseRestTest {
         String name =  Randomness.randomString(5);
         String mobileNumber = Randomness.randomNumber(10);
         
-        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,vendor.formatVendorRequest(name, mobileNumber, "Supplier"));
+        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,vendor.formatVendorRequest(name, mobileNumber, "Individual"));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         JSONObject jobject = new JSONObject(restResponse.getResponse());
