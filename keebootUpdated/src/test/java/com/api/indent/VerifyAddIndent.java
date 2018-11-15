@@ -34,7 +34,7 @@ public class VerifyAddIndent extends BaseRestTest {
         AddIndent indent = new AddIndent(getDriver());
         
         
-      //get call to get all the customer details
+        //get call to get all the customer details
         RestResponse restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/customer/mini", HeaderType.JSON);
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
@@ -45,7 +45,7 @@ public class VerifyAddIndent extends BaseRestTest {
       String vehicleTypeId = Randomness.randomAlphaNumeric(5);
       String goodsTypeId = Randomness.randomAlphaNumeric(5);
         
-      String pickupDateTime = Randomness.generateCurrentDatetime();
+      String pickupDateTime = Randomness.generateCurrentXMLDate();
    
       //get call to get all the location details
     restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/location/mini", HeaderType.JSON);

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="defaultUrl" parallel="methods" thread-count="1" data-provider-thread-count="1" verbose="1">
+
+	<parameter name="browserUnderTest" value="chrome" />
+	<parameter name="environment" value="QA" />
+	<parameter name="runLocation" value="local" />
+	<parameter name="reportToMustard" value="false" />
+	<parameter name="browserVersion" value="" />
+	<parameter name="operatingSystem" value="windows 7" />
+	<parameter name="application" value="defaultUrl" />
+	<parameter name="logLevel" value="INFO" />
+ 
+	<test name="VerifyAddInvoice">
+		<classes>
+			<class name="com.api.invoice.VerifyAddInvoice" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
