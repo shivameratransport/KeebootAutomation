@@ -38,7 +38,7 @@ public class VerifyEditInvoice extends BaseRestTest{
         
         //capturing the customer id to edit
         JSONObject jObject = new JSONObject(restResponse.getResponse());
-        String invoiceId=jObject.getJSONArray("response").getJSONObject(1).getString("invoiceId");
+        String invoiceId=jObject.getJSONArray("response").getJSONObject(0).getString("invoiceId");
         
         
         //get call to get all the customer details
