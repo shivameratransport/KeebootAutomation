@@ -21,7 +21,7 @@ public class AddLocation {
    }
    
    
-   public String formatLocationAddRequest(String type,String radius,String lat,String lng,
+   public String formatLocationAddRequest(String type,Double radius,Double lat,Double lng,
 		   String address,String locationCode,String state,String city,String locationType,Boolean isActive ) throws JSONException
    {
 	   JSONObject requestParams = new JSONObject(); 
@@ -35,7 +35,7 @@ public class AddLocation {
 	   geoFence.put("center", jsonArray);
 	   type = "circle";
 	   geoFence.put("type", type);
-	   radius = "1000";
+	   radius = 1000.0;
 	   geoFence.put("radius", radius);
 	  requestParams.put("geoFence", geoFence);
 	 	geoLocation.put("lat", lat);
