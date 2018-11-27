@@ -18,7 +18,7 @@ public class AddFleet  {
   }
   
   
-  public String formatFleetRequest(String name,String ownershipType,String vehicleNumber,String vehicleType) throws JSONException
+  public String formatFleetRequest(String name,String ownershipType,String vehicleNumber,String vehicleType,Integer currentMeterReading) throws JSONException
   {
 	   JSONObject requestParams = new JSONObject();
 	   if(!name.equals(""))
@@ -38,6 +38,7 @@ public class AddFleet  {
 	   requestParams.put("vehicleType", vehicleType);
 	   }
 	   
+	   requestParams.put("currentMeterReading", currentMeterReading);
 	   
 	   return requestParams.toString();
   }
