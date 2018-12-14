@@ -36,7 +36,7 @@ public class VerifyAddDriver extends BaseRestTest{
 	        AddDriver driver = new AddDriver(getDriver());
 	        
 	        
-	        String httpBody = driver.formatDriverRequest(DriverName, "Supplier",mobileNumber);
+	        String httpBody = driver.formatDriverRequest(DriverName, "OWN",mobileNumber);
 	        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody);
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
 	        

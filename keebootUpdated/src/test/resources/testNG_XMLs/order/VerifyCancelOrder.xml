@@ -11,9 +11,9 @@
 	<parameter name="application" value="defaultUrl" />
 	<parameter name="logLevel" value="INFO" />
  
-	<test name="VerifyEditOrder">
+	<test name="VerifyCancelOrder">
 		<classes>
-			<class name="com.api.order.VerifyEditOrder" />
+			<class name="com.api.order.VerifyCancelOrder" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
