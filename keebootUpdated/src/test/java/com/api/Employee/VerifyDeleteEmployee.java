@@ -28,7 +28,7 @@ public class VerifyDeleteEmployee extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/profile/employee";
+	        String ApiUrl = "https://api.qe.keeboot.com/profile/employee";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl+"s", HeaderType.JSON);

@@ -31,7 +31,7 @@ public class VerifyEditDriver extends BaseRestTest{
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/driver";
+        String ApiUrl = "https://api.qe.keeboot.com/driver";
         String mobileNumber = Randomness.randomNumber(10);
         
         RestService restService = new RestService();

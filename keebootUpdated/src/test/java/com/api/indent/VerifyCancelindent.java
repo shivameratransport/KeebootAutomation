@@ -27,7 +27,7 @@ public class VerifyCancelindent extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/indent";
+	        String ApiUrl = "https://api.qe.keeboot.com/indent";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);

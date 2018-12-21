@@ -28,11 +28,11 @@ public class VerifyAddOrder extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/order";
+        String ApiUrl = "https://api.qe.keeboot.com/order";
         RestService restService = new RestService();
         
         //to get the vehicle type and id
-        RestResponse restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/vehicle", HeaderType.JSON);
+        RestResponse restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/vehicle", HeaderType.JSON);
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
        JSONObject jObject = new JSONObject(restResponse.getResponse());
@@ -40,7 +40,7 @@ public class VerifyAddOrder extends BaseRestTest {
        String vehicleType = jObject.getJSONArray("response").getJSONObject(0).getString("vehicleType");
        
      //get call to get all the customer details
-        restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/customer/mini", HeaderType.JSON);
+        restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/customer/mini", HeaderType.JSON);
        Common.validateStatusCode(restResponse.getStatusCode(),200);
        
        //capturing the customer id to edit
@@ -51,7 +51,7 @@ public class VerifyAddOrder extends BaseRestTest {
        
        
        //get call to get all the location details
-       restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/location/mini", HeaderType.JSON);
+       restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/location/mini", HeaderType.JSON);
        Common.validateStatusCode(restResponse.getStatusCode(),200);
       
        //capturing the location id to edit

@@ -30,7 +30,7 @@ public class VerifyAddCustomer extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/customer";
+        String ApiUrl = "https://api.qe.keeboot.com/customer";
         RestService restService = new RestService();
         AddCustomer customer = new AddCustomer(getDriver());
         

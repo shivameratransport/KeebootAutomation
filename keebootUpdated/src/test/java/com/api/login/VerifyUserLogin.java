@@ -27,7 +27,7 @@ public class VerifyUserLogin extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/login/generate-otp";
+	        String ApiUrl = "https://api.qe.keeboot.com/login/generate-otp";
 	        
 	        RestService restService = new RestService();
 	     

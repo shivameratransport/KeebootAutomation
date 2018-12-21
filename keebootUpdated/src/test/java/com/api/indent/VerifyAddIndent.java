@@ -29,13 +29,13 @@ public class VerifyAddIndent extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/indent";
+        String ApiUrl = "https://api.qe.keeboot.com/indent";
         RestService restService = new RestService();
         AddIndent indent = new AddIndent(getDriver());
         
         
         //get call to get all the customer details
-        RestResponse restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/customer/mini", HeaderType.JSON);
+        RestResponse restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/customer/mini", HeaderType.JSON);
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         //capturing the customer id to edit
@@ -48,7 +48,7 @@ public class VerifyAddIndent extends BaseRestTest {
       String pickupDateTime = Randomness.generateCurrentXMLDate();
    
       //get call to get all the location details
-    restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/location/mini", HeaderType.JSON);
+    restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/location/mini", HeaderType.JSON);
     Common.validateStatusCode(restResponse.getStatusCode(),200);
    
     //capturing the location id to edit

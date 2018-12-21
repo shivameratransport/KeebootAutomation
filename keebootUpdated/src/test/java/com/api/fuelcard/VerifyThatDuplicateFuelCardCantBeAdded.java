@@ -30,7 +30,7 @@ public class VerifyThatDuplicateFuelCardCantBeAdded extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/fuelcard";
+        String ApiUrl = "https://api.qe.keeboot.com/fuelcard";
         int cardNumber =  Randomness.randomNumberBetween(10000,99999);
         String  vehicleNumber =   Randomness.randomNumber(5);
         RestService restService = new RestService();

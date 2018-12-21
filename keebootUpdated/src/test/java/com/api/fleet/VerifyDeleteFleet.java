@@ -28,7 +28,7 @@ public class VerifyDeleteFleet extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/vehicle";
+	        String ApiUrl = "https://api.qe.keeboot.com/vehicle";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);

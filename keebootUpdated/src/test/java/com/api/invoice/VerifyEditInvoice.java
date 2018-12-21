@@ -29,7 +29,7 @@ public class VerifyEditInvoice extends BaseRestTest{
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/invoice";
+        String ApiUrl = "https://api.qe.keeboot.com/invoice";
         RestService restService = new RestService();
         
         //get call to get all the customer details

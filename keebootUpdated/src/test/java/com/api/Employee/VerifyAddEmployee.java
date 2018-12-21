@@ -29,7 +29,7 @@ public class VerifyAddEmployee extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/profile/employee";
+	        String ApiUrl = "https://api.qe.keeboot.com/profile/employee";
 	        
 	        int mobileNum =  Randomness.randomNumberBetween(111111111,999999999);
 	        String employeeName =  Randomness.randomString(5);

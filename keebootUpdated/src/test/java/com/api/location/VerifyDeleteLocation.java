@@ -28,7 +28,7 @@ public class VerifyDeleteLocation extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/location";
+	        String ApiUrl = "https://api.qe.keeboot.com/location";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);

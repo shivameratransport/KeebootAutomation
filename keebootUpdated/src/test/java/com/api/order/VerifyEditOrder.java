@@ -29,7 +29,7 @@ public class VerifyEditOrder extends BaseRestTest{
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/order";
+        String ApiUrl = "https://api.qe.keeboot.com/order";
         RestService restService = new RestService();
         
         //get call to get all the customer details

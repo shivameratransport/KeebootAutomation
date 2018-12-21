@@ -31,7 +31,7 @@ public class VerifyEditCustomer extends BaseRestTest{
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/customer";
+        String ApiUrl = "https://api.qe.keeboot.com/customer";
         RestService restService = new RestService();
         
         //get call to get all the customer details

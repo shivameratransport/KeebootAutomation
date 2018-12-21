@@ -27,7 +27,7 @@ public class VerifyDeleteVendor extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/vendor";
+	        String ApiUrl = "https://api.qe.keeboot.com/vendor";
 	        
 	        //get call to get all the vendor details
 	        RestService restService = new RestService();

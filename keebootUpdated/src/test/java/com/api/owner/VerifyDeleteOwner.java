@@ -28,7 +28,7 @@ public class VerifyDeleteOwner extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/owner";
+	        String ApiUrl = "https://api.qe.keeboot.com/owner";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);

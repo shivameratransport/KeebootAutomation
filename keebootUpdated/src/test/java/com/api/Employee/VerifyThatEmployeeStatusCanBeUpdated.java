@@ -29,7 +29,7 @@ public class VerifyThatEmployeeStatusCanBeUpdated extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/profile/employees";
+	        String ApiUrl = "https://api.qe.keeboot.com/profile/employees";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl,HeaderType.JSON);
@@ -38,7 +38,7 @@ public class VerifyThatEmployeeStatusCanBeUpdated extends BaseRestTest{
 	        JSONObject jObject = new JSONObject(restResponse.getResponse());
 	        
 	      String employeeId=jObject.getJSONArray("response").getJSONObject(5).getString("employeeId");
-	      String updatedUrl = "https://api.staging.keeboot.com/profile/employee/"+employeeId;
+	      String updatedUrl = "https://api.qe.keeboot.com/profile/employee/"+employeeId;
 	      UpdateEmployee employee = new UpdateEmployee(getDriver());
 	      restService.sendPutRequest(updatedUrl, HeaderType.JSON, employee.formatEmployeeUpdateRequest("", "", "", "", "", "", "", "", "", "", "",isActive));
 	      

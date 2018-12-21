@@ -28,7 +28,7 @@ public class VerifyDeleteFuelCard extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/fuelcard";
+	        String ApiUrl = "https://api.qe.keeboot.com/fuelcard";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);

@@ -31,7 +31,7 @@ public class VerifyEditOwner extends BaseRestTest{
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/owner";
+        String ApiUrl = "https://api.qe.keeboot.com/owner";
         RestService restService = new RestService();
         
         //get call to get all the owner details

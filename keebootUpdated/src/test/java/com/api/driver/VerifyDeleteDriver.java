@@ -28,7 +28,7 @@ public class VerifyDeleteDriver extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/driver";
+	        String ApiUrl = "https://api.qe.keeboot.com/driver";
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);

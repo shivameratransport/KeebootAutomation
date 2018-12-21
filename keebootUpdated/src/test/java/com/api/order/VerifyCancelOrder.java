@@ -27,7 +27,7 @@ public class VerifyCancelOrder extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/order";
+	        String ApiUrl = "https://api.qe.keeboot.com/order";
 	        
 	        RestService restService = new RestService();
 	        RestResponse restResponse=restService.sendGetRequest(ApiUrl, HeaderType.JSON);

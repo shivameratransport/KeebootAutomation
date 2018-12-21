@@ -30,7 +30,7 @@ public class VerifyThatDuplicateOwnerCantBeAdded extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/owner";
+        String ApiUrl = "https://api.qe.keeboot.com/owner";
         RestService restService = new RestService();
        int mobileNum =  Randomness.randomNumberBetween(111111111,999999999);
       String ownerName =  Randomness.randomString(5);

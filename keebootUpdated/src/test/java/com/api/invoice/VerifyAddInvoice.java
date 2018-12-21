@@ -29,11 +29,11 @@ public class VerifyAddInvoice extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/invoice";
+        String ApiUrl = "https://api.qe.keeboot.com/invoice";
         RestService restService = new RestService();
         
         //get call to get all the customer details
-        RestResponse restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/customer/mini", HeaderType.JSON);
+        RestResponse restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/customer/mini", HeaderType.JSON);
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         //capturing the customer id
@@ -42,7 +42,7 @@ public class VerifyAddInvoice extends BaseRestTest {
         String customerName =jObject.getJSONArray("response").getJSONObject(0).getString("customerName");
         
         //to get the from address and to address and trip id associated with that customer
-        restResponse=restService.sendGetRequest("https://api.staging.keeboot.com/trip/by-customer/"+customerId, HeaderType.JSON);
+        restResponse=restService.sendGetRequest("https://api.qe.keeboot.com/trip/by-customer/"+customerId, HeaderType.JSON);
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         jObject = new JSONObject(restResponse.getResponse());

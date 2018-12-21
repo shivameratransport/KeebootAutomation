@@ -29,7 +29,7 @@ public class VerifyAddVendor  extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/vendor";
+        String ApiUrl = "https://api.qe.keeboot.com/vendor";
         RestService restService = new RestService();
         AddVendor vendor = new AddVendor(getDriver());
         String name =  Randomness.randomString(5);

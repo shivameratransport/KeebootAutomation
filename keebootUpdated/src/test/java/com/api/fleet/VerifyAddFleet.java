@@ -30,7 +30,7 @@ public class VerifyAddFleet extends BaseRestTest {
         TestReporter.logScenario(testScenario);
         testStart(testName);
         
-        String ApiUrl = "https://api.staging.keeboot.com/vehicle";
+        String ApiUrl = "https://api.qe.keeboot.com/vehicle";
         RestService restService = new RestService();
         
         String fleetName =  Randomness.randomString(5);

@@ -29,7 +29,7 @@ public class VerifyThatDuplicateLocationCanNotBeAdded extends BaseRestTest{
 	        TestReporter.logScenario(testScenario);
 	        testStart(testName);
 	        
-	        String ApiUrl = "https://api.staging.keeboot.com/location";
+	        String ApiUrl = "https://api.qe.keeboot.com/location";
 	        
 	        RestService restService = new RestService();
 	        AddLocation location = new AddLocation(getDriver());
