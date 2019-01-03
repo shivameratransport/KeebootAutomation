@@ -18,9 +18,15 @@ public class AddFleet  {
   }
   
   
-  public String formatFleetRequest(String name,String ownershipType,String vehicleNumber,String vehicleType,Integer currentMeterReading) throws JSONException
+  public String formatFleetRequest(String name,String ownershipType,String vehicleNumber,String vehicleType,
+		  Integer currentMeterReading,String ownerName,String ownerId,String ownerMobileNumber,
+		  String vendorName,String vendorMobileNumber) throws JSONException
   {
 	   JSONObject requestParams = new JSONObject();
+	   JSONObject contractDetails = new JSONObject();
+	   
+	   
+	   
 	   if(!name.equals(""))
 	   {
 	   requestParams.put("name", name);
@@ -38,7 +44,29 @@ public class AddFleet  {
 	   requestParams.put("vehicleType", vehicleType);
 	   }
 	   
+	   if(!ownerName.equals(""))
+	   {
+		   contractDetails.put("ownerName", ownerName);
+	   }
+	   
+	   if(!ownerId.equals(""))
+	   {
+		   contractDetails.put("ownerId", ownerId);
+	   }
+	   if(!ownerMobileNumber.equals(""))
+	   {
+		   contractDetails.put("ownerMobileNumber", ownerMobileNumber);
+	   }
+	   if(!vendorName.equals(""))
+	   {
+		   contractDetails.put("vendorName", vendorName);
+	   }
+	   if(!vendorMobileNumber.equals(""))
+	   {
+		   contractDetails.put("vendorMobileNumber", vendorMobileNumber);
+	   }
 	   requestParams.put("currentMeterReading", currentMeterReading);
+	   requestParams.put("contractDetails", contractDetails);
 	   
 	   return requestParams.toString();
   }

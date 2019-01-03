@@ -39,7 +39,7 @@ public class VerifyAddFleet extends BaseRestTest {
        int currentMeterReading=Randomness.randomNumberBetween(10, 50);
         
         AddFleet fleet = new AddFleet(getDriver());
-        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,fleet.formatFleetRequest(fleetName, "OWN", vehicleNumber,"6Tyre Full Body (9MT) 22Ft ",currentMeterReading));
+        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,fleet.formatFleetRequest(fleetName, "OWN", vehicleNumber,"6Tyre Full Body (9MT) 22Ft ",currentMeterReading,"","","","",""));
         Common.validateStatusCode(restResponse.getStatusCode(),200);
         
         JSONObject jobject = new JSONObject(restResponse.getResponse());
