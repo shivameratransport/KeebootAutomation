@@ -60,26 +60,47 @@ public class AddOrder {
 		   customer.put("aliasOrShortName", aliasOrShortName);
 	   }
 	   JSONArray locations = new JSONArray();
+	   
 	   JSONObject obj = new JSONObject(); 
+	   JSONObject obj1 = new JSONObject(); 
 	   if(!locationCode.equals("")) 
 	   {
 	   obj.put("locationCode", locationCode);
+	   }
+	   if(!locationCode.equals("")) 
+	   {
+	   obj1.put("locationCode", locationCode);
 	   }
 	   if(!description.equals("")) 
 	   {
 	   obj.put("description", description);
 	   }
+	   if(!description.equals("")) 
+	   {
+	   obj1.put("description", description);
+	   }
 	   if(!locationType.equals("")) 
 	   {
 	   obj.put("locationType", locationType);
+	   }
+	   if(!locationType.equals("")) 
+	   {
+	   obj1.put("locationType", locationType);
 	   }
 	   if(!locationId.equals("")) 
 	   {
 	   obj.put("locationId", locationId);
 	   }
+	   if(!locationId.equals("")) 
+	   {
+	   obj1.put("locationId", locationId);
+	   }
 	   locations.put(obj);
+	   locations.put(obj1);
+	  
 	   
 	   requestParams.put("customer", customer);
+	   requestParams.put("locations", locations);
 	   requestParams.put("locations", locations);
 	   
 	   return requestParams.toString();
