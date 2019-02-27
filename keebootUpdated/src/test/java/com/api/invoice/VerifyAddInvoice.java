@@ -38,7 +38,7 @@ public class VerifyAddInvoice extends BaseRestTest {
         
         //capturing the customer id
         JSONObject jObject = new JSONObject(restResponse.getResponse());
-        String customerId=jObject.getJSONArray("response").getJSONObject(0).getString("customerId");
+        String customerId=jObject.getJSONArray("response").getJSONObject(4).getString("customerId");
         String customerName =jObject.getJSONArray("response").getJSONObject(0).getString("customerName");
         
         //to get the from address and to address and trip id associated with that customer

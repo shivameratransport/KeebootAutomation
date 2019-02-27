@@ -1,2 +1,2 @@
-Scenario,lat,lng,address,state,city,locationType
-VerifyAddLocation,13.0042934,77.5802103,Lower Palace Orchards Guttahalli  Bengaluru  Karnataka 560003 India,Karnataka,bangalore,PICKUP
+Scenario,lat,lng,address,state,area,city,locationType
+VerifyAddLocation,13.0042934,77.5802103,Lower Palace Orchards Guttahalli  Bengaluru  Karnataka 560003 India,Karnataka,Guttahalli,bangalore,PICKUP

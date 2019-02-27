@@ -22,7 +22,7 @@ public class VerifyThatDuplicateLocationCanNotBeAdded extends BaseRestTest{
 
 	    @Test(groups = { "verify that Duplicate location can't be added", "VerifyThatDuplicateLocationCanNotBeAdded" }, dataProvider = "scenario")
 	    public void verifyThatDuplicateLocationCanNotBeAdded(String testScenario,String lat,
-	    		String lng,String address,String state,String city,String locationType) throws JSONException {
+	    		String lng,String address,String state,String area,String city,String locationType) throws JSONException {
 
 	        String testName = "VerifyThatDuplicateLocationCanNotBeAdded";
 
@@ -37,7 +37,8 @@ public class VerifyThatDuplicateLocationCanNotBeAdded extends BaseRestTest{
 	        String LocationCode =  Randomness.randomString(5);
 	        double latittude =  Double.parseDouble(lat);
 	        double longittude =  Double.parseDouble(lng);
-	        String httpBody =location.formatLocationAddRequest("", 1000.0, latittude, longittude, address, LocationCode, state, city, locationType, isActive);
+	        String zip =  Randomness.randomNumber(5);
+	        String httpBody =location.formatLocationAddRequest("", 1000.0, latittude, longittude, address, LocationCode, state,area, city,zip, locationType, isActive);
 	        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody);
 	        
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
