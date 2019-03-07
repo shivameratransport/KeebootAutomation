@@ -13,7 +13,7 @@
  
 	<test name="VerifyEditConsigneeConsignor">
 		<classes>
-			<class name="com.api.ConsigneeConsignor.VerifyAddConsigneeConsignor" />
+			<class name="com.api.ConsigneeConsignor.VerifyEditConsigneeConsignor" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

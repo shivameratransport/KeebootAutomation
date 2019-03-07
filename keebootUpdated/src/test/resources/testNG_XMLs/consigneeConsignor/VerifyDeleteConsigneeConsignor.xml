@@ -11,9 +11,9 @@
 	<parameter name="application" value="defaultUrl" />
 	<parameter name="logLevel" value="INFO" />
  
-	<test name="VerifyEditConsigneeConsignor">
+	<test name="VerifyDeleteConsigneeConsignor">
 		<classes>
-			<class name="com.api.ConsigneeConsignor.VerifyAddConsigneeConsignor" />
+			<class name="com.api.ConsigneeConsignor.VerifyDeleteConsigneeConsignor" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->
