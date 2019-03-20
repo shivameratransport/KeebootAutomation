@@ -23,7 +23,7 @@ public class AddLocation {
    
    public String formatLocationAddRequest(String type,Double radius,Double lat,Double lng,
 		   String address,String locationCode,String state,String area,
-		   String city,String zip,String locationType,Boolean isActive ) throws JSONException
+		   String city,String zip,String locationType,String name,Boolean isActive ) throws JSONException
    {
 	   JSONObject requestParams = new JSONObject(); 
 	   JSONObject geoLocation = new JSONObject(); 
@@ -68,6 +68,12 @@ public class AddLocation {
 	   {
 	   requestParams.put("zip", zip);
 	   } 
+	   
+	   if(!name.equals("")) 
+	   {
+	   requestParams.put("name", name);
+	   } 
+	   
 	   if(!locationType.equals("")) 
 	   {
 	   requestParams.put("locationType", locationType);

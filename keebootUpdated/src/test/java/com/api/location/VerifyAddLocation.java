@@ -35,12 +35,13 @@ public class VerifyAddLocation extends BaseRestTest{
 	        AddLocation location = new AddLocation(getDriver());
 	        Boolean isActive= true;
 	        String LocationCode =  Randomness.randomString(5);
+	        String name =  Randomness.randomString(5);
 	        String zip =  Randomness.randomNumber(5);
 	        double latittude =  Double.parseDouble(lat);
 	        double longittude =  Double.parseDouble(lng);
 	      
 	        
-	        String httpBody =location.formatLocationAddRequest("",1000.0, latittude, longittude, address, LocationCode, state,area, city,zip, locationType, isActive);
+	        String httpBody =location.formatLocationAddRequest("",1000.0, latittude, longittude, address, LocationCode, state,area, city,zip,name, locationType, isActive);
 	        RestResponse restResponse=restService.sendPostRequest(ApiUrl, HeaderType.JSON,httpBody);
 	        
 	        Common.validateStatusCode(restResponse.getStatusCode(),200);
